@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Авитолог</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="navigation">
+            <a href=""><img class="navigation-logo" src="logo/avitolog-logo.png" alt="Авитолог"></a>
+
+            <a href="#about-1" class="navigation-menu">О КОМПАНИИ</a>
+            <a href="#steps-of-work-group" class="navigation-menu">ЭТАПЫ РАБОТЫ</a>
+            <a href="#who-is-avitolog" class="navigation-menu">КТО ТАКОЙ АВИТОЛОГ?</a>
+            <a href="#work-examples" class="navigation-menu">ПРИМЕРЫ РАБОТЫ</a>
+            <a href="#contacts" class="navigation-menu">КОНТАКТЫ</a>
+            <a href="https://t.me/avitolog_org"><img class="navigation-logo-telegram" src="logo/telegram.png" alt="Telegram"></a>
+            <a href="https://wa.me/79959982728"><img class="navigation-logo-whatsapp" src="logo/whatsapp.png" alt="Whatsapp"></a>
+        </div>
+    </header>
+    <menu>
+        <section class="homepage-group">
+            <figure class="homepage">
+                <figcaption class="homepage-info">
+                    <a href=""><img class="homepage-logo-avitolog" src="logo/logo-avitolog.png" alt="Авитолог"></a>
+                    <p>получайте максимум клиентов с Авито</p>
+                    <div>
+                        <img class="homepage-logo" src="logo/check-mark.png" alt="Галка">
+                        <p>настройка и ведение аккаунта</p>
+                    </div>
+                    <div>
+                        <img class="homepage-logo" src="logo/check-mark.png" alt="Галка">
+                        <p>масспостинг</p>
+                    </div>   
+                    <div> 
+                        <img class="homepage-logo" src="logo/check-mark.png" alt="Галка">
+                        <p>продвижение объявлений </p>
+                    </div>
+                    <p>Помогаем бизнесу эффективно продавать на сайте объявлений №1</p>
+                    <a href="#contacts" class="homepage-button">ОСТАВИТЬ ЗАЯВКУ</a>
+                    <a href="#audit-container" class="homepage-button">БЕСПЛАТНЫЙ АУДИТ</a>
+                    <img class="homepage-logo-forward" src="logo/forward.png" alt="Галка">
+                </figcaption>
+                <img class="homepage-img" src="image/image-Photoroom.png" alt="">
+            </figure>
+            <div id="audit-container" class="section-offset">
+                <div class="progress-bar">
+                    <div class="progress" id="progress"></div>
+                </div>
+                <p id="question-counter">Вопрос 1 / 6</p>
+                <div class="audit-form" id="audit-form">
+                    <h2>Сделаем бесплатный аудит по Вашему виду бизнеса</h2>
+                    <p>Заполните короткую форму и получите анализ уже сегодня</p>
+                    <form id="auditForm">
+                        <div class="form-group">
+                            <label for="input-field" id="form-label">Вид бизнеса:</label>
+                            <input type="text" id="input-field" placeholder="Введите вид бизнеса" required>
+                        </div>
+                        <div class="form-group" id="xls-example-container" style="display: none;">
+                            <a href="#" id="xls-link">ПРИМЕР ОТЧЕТА XLS</a>
+                            <img id="xls-image" src="image/XLS.png" alt="Пример отчета XLS" style="display: none; margin-top: 10px; width: 100%; max-width: 600px;">
+                        </div>
+                        <p id="error-message" style="display: none; color: red; margin-top: 10px;"></p>
+                
+                        <button type="button" id="next-btn">Далее</button>
+                    </form>
+                </div>
+                <div id="success-message" style="display: none; text-align: center;">
+                    <h2>ЗАЯВКА ОТПРАВЛЕНА</h2>
+                    <p>Спасибо за заполнение формы. Мы свяжемся с вами в ближайшее время.</p>
+                </div>
+            </div>                               
+        </section>
+        <section class="about-group">
+            <div>
+                <figure id="about-1" class="section-offset">
+                    <figcaption class="about-info1">
+                        <h1>О НАС</h1>
+                        <p>Наша команда собрана из качественных специалистов - авитологов, знающих свое дело. многие из наших коллег ранее работали в компании авито и знают все тонкости и специфику сайта изнутри. для вас мы предложим максимально выгодный вариант размещения и продвижения объявлений для получения максимальной активности.</p>
+                    </figcaption>
+                    <img class="about-img-1" src="image/about.png" alt="">
+                </figure>
+                <figure class="about-2">
+                    <img class="about-img-2" src="image/about-us.png" alt="">
+                    <figcaption class="about-info2">
+                        <div>
+                            <img class="about-logo" src="logo/switch-arrows.png" alt="Галка">
+                            <p>Мы настраиваем эффективную рекламу на досках объявлений (классифайдах);</p>
+                        </div>
+                        <div> 
+                            <img class="about-logo" src="logo/switch-arrows.png" alt="Галка">
+                            <p>Для многих компаний эти сайты играют основную роль в получении клиентов. наша задача — помочь бизнесу получать максимальную отдачу от работы на ключевых ресурсах.</p>
+                        </div>
+                        <div>
+                            <img class="about-logo" src="logo/switch-arrows.png" alt="Галка">
+                            <p>Площадки, с которыми мы работаем: avito, циан, юла, яндекс услуги и другие;</p>
+                        </div>   
+        
+                        <!-- Контейнер для изображений -->
+                        <div class="platforms-logos">
+                            <img src="logo/avito.png" alt="Avito">
+                            <img src="logo/cian.png" alt="Циан">
+                            <img src="logo/yula.png" alt="Юла">
+                            <img src="logo/yandex.png" alt="Яндекс Услуги">
+                        </div>
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+        
+        <section class="steps-of-work">
+            <div>
+                <div id="steps-of-work-group" class="section-offset">
+                    <h1>ЭТАПЫ РАБОТЫ</h1>
+                    <p>ВАЖНО❗️Начало работы происходит только после подробного аудита, когда мы точно понимаем, что можем помочь бизнесу зарабатывать.</p>
+                    <div class="steps-of-work-container">
+                        <div class="steps-of-work-block">
+                            <div class="step-circle-arrow">
+                                <div class="step-circle">
+                                    <img class="steps-of-work-block-logo" src="logo/request.png" alt="">
+                                    <h2>1. ЗАЯВКА</h2>
+                                </div>
+                                <img class="steps-of-work-block-arrow-right-logo" src="logo/double-arrow.png" alt="">
+                            </div>
+                            <p>Оставьте заявку на сайте и профессиональный Авитолог свяжется с вами в течении часа и даст бесплатную консультацию.</p>
+                        </div>
+                        
+                        <div class="steps-of-work-block">
+                            <div class="step-circle-arrow">
+                                <div class="step-circle">
+                                    <img class="steps-of-work-block-logo" src="logo/audit.png" alt="">
+                                    <h2>2. АУДИТ</h2>
+                                </div>
+                                <img class="steps-of-work-block-arrow-right-logo" src="logo/double-arrow.png" alt="">
+                            </div>
+                            <p>Проводим бесплатный аудит конкурентов и рекламной кампании.</p>
+                        </div>
+        
+                        <div class="steps-of-work-block">
+                            <div class="step-circle-arrow">
+                                <div class="step-circle">
+                                    <img class="steps-of-work-block-logo" src="logo/setup account.png" alt="">
+                                    <h2>3. НАСТРОЙКА АККАУНТА</h2>
+                                </div>
+                                <img class="steps-of-work-block-arrow-right-logo" src="logo/double-arrow.png" alt="">
+                            </div>
+                            <p>Заполнение профиля. Составление продающего описания. Создание креативов и постинг объявлений.</p>
+                        </div>
+        
+                        <div class="steps-of-work-block">
+                            <div class="step-circle-arrow">
+                                <div class="step-circle">
+                                    <img class="steps-of-work-block-logo" src="logo/promotion.png" alt="">
+                                    <h2>4. ПРОДВИЖЕНИЕ</h2>
+                                </div>
+                                <img class="steps-of-work-block-arrow-right-logo" src="logo/double-arrow.png" alt="">
+                            </div>
+                            <p>Отслеживаем конкурентов и применяем услуги продвижения, чтобы получать больше заявок.</p>
+                        </div>
+        
+                        <div class="steps-of-work-block">
+                            <div class="step-circle-arrow">
+                                <div class="step-circle">
+                                    <img class="steps-of-work-block-logo" src="logo/report.png" alt="">
+                                    <h2>5. ОТЧЕТ</h2>
+                                </div>
+                            </div>
+                            <p>Анализируем результаты работы и ищем точки развития для роста в следующем месяце.</p>
+                        </div>
+                    </div>
+                </div>            
+                <div class="how-we-work">
+                    <div>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/0_bxfvmBZKE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <div>
+                        <h1>КАК МЫ РАБОТАЕМ?</h1>
+                        <p>Выбирая avitolog.org, вы выбираете надежного партнера в настройке рекламы на Avito.
+                        <br>Наша команда помогает бизнесу достичь нужного результата и получить максимум целевых заявок по нужной цене.</p>
+                    </div>
+                </div>
+            </div>
+        </section>           
+        <section id="work-examples" class="section-offset">
+            <div class="work-examples-contaner">
+                <div>
+                <h1>ПРИМЕРЫ РАБОТ</h1>
+                <p>За всю историю работы мы уже настроили более 700 рекламных кампаний в разных категориях. Ниже несколько свежих примеров работы с нами.</p>
+                <div class="statistics">
+                    <h2>СТАТИСТИКА</h2>
+                    <div>
+                        <img class="statistics-img" src="image/statistics/аренда авто.jpg" alt="">
+                        <img class="statistics-img" src="image/statistics/бытовки.jpg" alt="">
+                    </div>
+                </div>
+                <div class="infographic">
+                    <h2>ИНФОГРАФИКА</h2>
+                    <div>
+                        <img class="infographic-img" src="image/infographic/1.jpg" alt="">
+                        <img class="infographic-img" src="image/infographic/2.jpg" alt="">
+                        <img class="infographic-img" src="image/infographic/3.jpg" alt="">
+                    </div>
+                </div>
+                </div>
+            </div>
+        </section>
+        <section class="tariff-group">
+            <div id="tariff" class="section-offset">
+                <div class="tariff-menu">
+                    <h1>ТАРИФЫ</h1>
+                    <p>Каждый тарифный план включает определенный набор услуг. Вам остается решить, какой объем работы мы будем делать за вас!</p>
+                </div>
+                <div class="tariff-container">
+                    <div class="tariff-item">
+                        <h1>БАЗОВЫЙ</h1>
+                        <hr>
+                        <h2>15000₽</h2>
+                        <hr>
+                        <p>Аудит конкурентов</p>
+                        <hr>
+                        <p>Подбор тарифа и стратегии продвижения</p>
+                        <hr>
+                        <p>Составление продающего текста</p>
+                        <hr>
+                        <p>Создание уникальных креативов</p>
+                        <hr>
+                        <p>Постинг объявлений</p>
+                        <hr>
+                        <p>Продвижение объявлений в поиске</p>
+                        <hr>
+                        <p>Работа со службой поддержки</p>
+                        <hr>
+                        <p>Отчет</p>
+                        <button class="tariff-block-button">ОСТАВИТЬ ЗАЯВКУ</button>
+                    </div>
+                    <div class="tariff-item">
+                        <h1>ОПТИМАЛЬНЫЙ</h1>
+                        <hr>
+                        <h2>20000₽</h2>
+                        <hr>
+                        <p>Аудит конкурентов</p>
+                        <hr>
+                        <p>Подбор тарифа и стратегии продвижения</p>
+                        <hr>
+                        <p>Составление продающего текста</p>
+                        <hr>
+                        <p>Создание уникальных креативов</p>
+                        <hr>
+                        <p>МАССПОСТИНГ объявлений</p>
+                        <hr>
+                        <p>Продвижение объявлений в поиске</p>
+                        <hr>
+                        <p>Помощь в интеграции с CRM</p>
+                        <hr>
+                        <p>Работа со службой поддержки</p>
+                        <hr>
+                        <p>Отчет</p>
+                        <button class="tariff-block-button">ОСТАВИТЬ ЗАЯВКУ</button>
+                    </div>
+                    <div class="tariff-item">
+                        <h1>МАКСИМАЛЬНЫЙ</h1>
+                        <hr>
+                        <h2>35000₽</h2>
+                        <hr>
+                        <p>Аудит конкурентов</p>
+                        <hr>
+                        <p>Подбор тарифа и стратегии продвижения</p>
+                        <hr>
+                        <p>Составление продающего текста</p>
+                        <hr>
+                        <p>Подбор фотографий</p>
+                        <hr>
+                        <p>Создание уникальных креативов</p>
+                        <hr>
+                        <p>Создание видео для объявлений</p>
+                        <hr>
+                        <p>МАССПОСТИНГ объявлений</p>
+                        <hr>
+                        <p>Продвижение объявлений в поиске</p>
+                        <hr>
+                        <p>Помощь в интеграции с CRM</p>
+                        <hr>
+                        <p>Работа со службой поддержки</p>
+                        <hr>
+                        <p>Отчет</p>
+                        <button class="tariff-block-button">ОСТАВИТЬ ЗАЯВКУ</button>
+                    </div>
+                </div>
+            </div>
+        </section>        
+        <section class="trust-certification">
+            <div>
+            <div class="trust">
+                    <h1>
+                        ПОЧЕМУ НАМ ДОВЕРЯЮТ
+                    </h1>
+                    <p>
+                       Наша задача - помочь бизнесу сконцентрироваться на выполнении основных задач и полностью освободиться от рутинной работы на всех площадках. Вам больше не придется звонить в поддержку, размещать объявления, отслеживать конкурентов, вникать в работу каждого нового продукта или изменения. Эту работу мы возьмем на себя!
+                    </p>
+                    <a href="#tariff" class="trust-button">СТОИМОСТЬ</a>
+            </div>
+            <div class="certification">
+                <div>
+                    <h1>СЕРТИФИКАЦИЯ АВИТОЛОГОВ</h1>
+                    <p>
+                        Летом 2021 года сайт Авито провел сертификацию всех Авитологов России.
+                    </p>  
+                    <p>  
+                        Далеко не всем удалось пройти все этапы и получить отличительный знак - СЕРТИФИЦИРОВАННЫЙ АВИТОЛОГ.
+                    </p>
+                    <p>
+                        Сотрудники нашей компании подтвердили знания правил Авито, технологии работы сайта и показали обширный опыт работы в разных категориях бизнеса.
+                    </p>
+            
+                    <!-- Контейнер для изображений -->
+                    <div class="certification-img-container">
+                        <img class="certification-img" src="image/franc.png" alt="">
+                        <img class="certification-img" src="image/alexsandr.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="info">
+                <div class="info-item">
+                    <img class="steps-of-work-block-logo" src="logo/account.png" alt="">
+                    <h1>
+                        ВЕДЕНИЕ АККАУНТА
+                    </h1>
+                    <p>
+                        Избавьте себя от рутины и доверьте работу профессионалам
+                    </p>
+                </div>
+                <div class="info-item">
+                    <img class="steps-of-work-block-logo" src="logo/promotion.png" alt="">
+                    <h1>
+                        ПРОДВИЖЕНИЕ
+                    </h1>
+                    <p>
+                        Подбор сервисов продвижения и стратегии размещения, основываясь на конкуренции и ваших потребностях
+                    </p>
+                </div>
+                <div class="info-item">
+                    <img class="steps-of-work-block-logo" src="logo/request.png" alt="">
+                    <h1>
+                        ОБЪЯВЛЕНИЯ
+                    </h1>
+                    <p>
+                        Уникальные креативы, продающее описание, подбор заголовков, поисковых запросов и Масспостинг
+                    </p>
+                </div>
+                <div class="info-item">
+                    <img class="steps-of-work-block-logo" src="logo/report.png" alt="">
+                    <h1>
+                        АНАЛИТИКА
+                    </h1>
+                    <p>
+                        Принимаем решение, основываясь на данных Avito PRO и Call-tracking. Ищем точки роста и развития
+                    </p>
+                </div>
+            </div>
+            </div>
+        </section>
+        <section class="reviews-group">
+            <div class="reviews">
+                <h1>
+                    РЕАЛЬНЫЕ ОТЗЫВЫ
+                </h1>
+                <div class="reviews-block">
+                    <img class="reviews-logo" src="image/askona.png" alt="">
+                    <p>
+                        Хочу выразить благодарность Александру и его команде.
+                        Сотрудничаем уже около года с разными направлениями нашего бизнеса.
+                        За это время стали уверенными лидерами в нашем направлении на сайте Авито и получаем достаточный объем заявок по хорошей стоимости.
+                        Компания соблюдает все договоренности и полностью выполняет свои обязательства, которые прописаны в договоре!
+                        Так же, плюс, что можем работать по ЭДО, это удобно. Рекомендую к сотрудничеству 👍🏻<br>
+                        <span class="author">Анастасия</span>
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section id="who-is-avitolog" class="section-offset">
+            <div class="trust-the-work">
+                <h1>ДОВЕРЬТЕ РАБОТУ С ПЛОЩАДКАМИ ПРОФЕССИОНАЛАМ</h1>
+                <p>
+                    На сегодняшний день, профессиональное ведение рекламы на сайтах объявлений Авито, ЦИАН, Яндекс и Юла способно приносить постоянный поток целевых клиентов, но только при постоянном контроле рекламной кампании. Работая с нами, вы получаете высокое качество настройки рекламы, экономите большое количество времени и денег, сразу получаете нужный результат. 
+                </p>
+                <div class="trust-the-work-container">
+                    <div class="trust-the-work-block">
+                        <img class="trust-the-work-logo" src="logo/avitolog-logo.png" alt="Avitolog Logo">
+                        <h2>AVITOLOG.ORG</h2>
+                        <p>
+                            Avitolog.org - рекламное агентство, специализирующееся на настройке рекламы на Авито. Мы гордимся нашей компетентностью, эффективностью и вниманием к срокам. Наша команда всегда на связи, чтобы помочь вам достичь максимальных результатов в рекламе на Авито.
+                        </p>
+                    </div>
+                    <div class="accordion">
+                        <!-- Первый блок -->
+                        <div class="accordion-item">
+                            <input type="checkbox" id="accordion-1" class="accordion-toggle">
+                            <label for="accordion-1" class="accordion-header">
+                                <span class="icon">?</span> КТО ТАКОЙ АВИТОЛОГ
+                            </label>
+                            <div class="accordion-content">
+                                <p>
+                                    Авитолог - это удаленный сотрудник компании, который отвечает за настройку рекламы и поток обращений с Авито и других досок объявлений.
+                                    Авитолог берет на себя всю работу с площадкой под ключ:
+                                    <br>- Изучает рынок, анализирует предложения конкурентов.
+                                    <br>- Создает описание объявлений, учитывая алгоритмы площадки.
+                                    <br>- Анализирует ключевые запросы.
+                                    <br>- Публикует объявления.
+                                    <br>- Разрабатывает стратегию и продвигает объявления.
+                                    <br>- Готовит отчетность о проделанной работе.
+                                    <br> Сотрудничество с авитологом подойдет компаниям и предпринимателям, которые хотят увеличить поток клиентов с площадок объявлений, но не имеют времени или ресурсов для самостоятельной настройки и ведения рекламы. Авитолог поможет эффективно использовать возможности Авито и других площадок для достижения ваших бизнес-целей.
+                                </p>
+                            </div>
+                        </div>
+            
+                        <!-- Второй блок -->
+                        <div class="accordion-item">
+                            <input type="checkbox" id="accordion-2" class="accordion-toggle">
+                            <label for="accordion-2" class="accordion-header">
+                                <span class="icon">?</span> КОМУ ПОДОЙДЕТ СОТРУДНИЧЕСТВО С АВИТОЛОГОМ
+                            </label>
+                            <div class="accordion-content">
+                                <p>
+                                    Основных случая три:
+                                    <br>- Только начинаете;
+                                    <br>- Нужно больше: у вас есть действующее размещение, но вы не довольны результатами;
+                                    <br>- Хотите делегировать: у вас нет времени на изучение особенностей работы с площадками.
+                                </p>
+                            </div>
+                        </div>
+            
+                        <!-- Третий блок -->
+                        <div class="accordion-item">
+                            <input type="checkbox" id="accordion-3" class="accordion-toggle">
+                            <label for="accordion-3" class="accordion-header">
+                                <span class="icon">?</span> СКОЛЬКО ВРЕМЕНИ НУЖНО ДЛЯ СТАРТА РАБОТЫ
+                            </label>
+                            <div class="accordion-content">
+                                <p>
+                                    Обычно на подготовку мы берем 2-3 рабочих дня. За это время готовится описание, креативы и оформляется профиль.
+                                </p>
+                            </div>
+                        </div>
+            
+                        <!-- Четвертый блок -->
+                        <div class="accordion-item">
+                            <input type="checkbox" id="accordion-4" class="accordion-toggle">
+                            <label for="accordion-4" class="accordion-header">
+                                <span class="icon">?</span> ЧТО ОТ МЕНЯ НУЖНО ДЛЯ СТАРТА РАБОТЫ
+                            </label>
+                            <div class="accordion-content">
+                                <p>
+                                    Полная информация о товаре/услуге и цены. Ссылки на сайт и социальные сети. Доступы к аккаунту Авито. Фото и видео.
+                                </p>
+                            </div>
+                        </div>
+            
+                        <!-- Пятый блок -->
+                        <div class="accordion-item">
+                            <input type="checkbox" id="accordion-5" class="accordion-toggle">
+                            <label for="accordion-5" class="accordion-header">
+                                <span class="icon">?</span> КОГДА Я НАЧНУ ПОЛУЧАТЬ ЗАЯВКИ
+                            </label>
+                            <div class="accordion-content">
+                                <p>
+                                    В большинстве ниш первые заявки можно получить в течение первой недели. Если спрос большой, то уже на третий-четвертый день.
+                                </p>
+                            </div>
+                        </div>
+            
+                        <!-- Шестой блок -->
+                        <div class="accordion-item">
+                            <input type="checkbox" id="accordion-6" class="accordion-toggle">
+                            <label for="accordion-6" class="accordion-header">
+                                <span class="icon">?</span> ОФОРМЛЯЕМ ЛИ ДОГОВОР
+                            </label>
+                            <div class="accordion-content">
+                                <p>
+                                    Да, всегда. Напишите нам, если предварительно хотите ознакомиться с шаблоном договора.
+                                </p>
+                            </div>
+                        </div>
+            
+                        <!-- Седьмой блок -->
+                        <div class="accordion-item">
+                            <input type="checkbox" id="accordion-7" class="accordion-toggle">
+                            <label for="accordion-7" class="accordion-header">
+                                <span class="icon">?</span> КАКИЕ ГАРАНТИИ
+                            </label>
+                            <div class="accordion-content">
+                                <p>
+                                    В нашем договоре мы детально фиксируем сроки и объемы работ. Гарантируем, что работы будут выполнены в указанный срок и в полном объеме. Или вернем деньги.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Восьмой блок -->
+                        <div class="accordion-item">
+                            <input type="checkbox" id="accordion-8" class="accordion-toggle">
+                            <label for="accordion-8" class="accordion-header">
+                                <span class="icon">?</span> КАК ВЗАИМОДЕЙСТВУЕМ
+                            </label>
+                            <div class="accordion-content">
+                                <p>
+                                    Закрепляем за вами личного менеджера. Общаемся в удобном вам мессенджере и в удобное для вас время (с поправками на часовые пояса). Присылаем регулярные отчеты о проделанной работе и полученных результатах.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contacts-group">
+            <div id="contacts" class="section-offset">
+                <div class="contacts-content">
+                    <h1>
+                        Контакты
+                    </h1>
+                    <a href="https://yandex.ru/maps/org/avitolog_org/103997925849/?ll=30.420211%2C59.923109&z=15.58"><img class="contacts-logo" src="logo/address.png" alt="address">г. Санкт-Петербург, Новочеркасский проспект д. 58, офис 207.</a>
+                    <a href=""><img class="contacts-logo" src="logo/email.png" alt="email">info@avitolog.org</a>
+                    <a href=""><img class="contacts-logo" src="logo/phone-call.png" alt="phone-call">+7(812)467-84-48</a>
+                        <div class="messenger-item">
+                            <a href="https://t.me/avitolog_org"><img class="messenger-logo" src="logo/telegram.png" alt="telegram"></a>
+                            <a href="https://wa.me/79959982728"><img class="messenger-logo" src="logo/whatsapp.png" alt="whatsapp"></a>
+                            <a href="https://www.facebook.com/Avitolog.org"><img class="messenger-logo" src="logo/facebook.png" alt="facebook"></a>
+                            <a href="https://www.instagram.com/avitologorg"><img class="messenger-logo" src="logo/instagram.png" alt="instagram"></a>
+                            <a href="https://vk.com/avitologorg"><img class="messenger-logo" src="logo/vk.png" alt="vk"></a>
+                            <a href="https://www.youtube.com/@avitologorg"><img class="messenger-logo" src="logo/youtube.png" alt="youtube"></a>
+                        </div>
+                </div>
+                <div class="contacts-form">
+                    <h2>Отправте заявку и получите бесплатную консультацию</h2>
+                    <form action="" method="post" enctype="">
+                        <div class="contacts-form-group">
+                            <input type="text" id="name" name="name" placeholder="Имя" required>
+                        </div>
+                        <div class="contacts-form-group">
+                            <input type="text" id="surname" name="surname" placeholder="Фамилия" required>
+                        </div>
+                        <div class="contacts-form-group">
+                            <input type="phone" id="phone" name="phone" placeholder="Телефона" required>
+                        </div>
+                        <div class="contacts-form-group">
+                            <input type="email" id="email" name="email" placeholder="Электронная почта" required>
+                        </div>
+                        <button type="submit">Отправить заявку</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </menu>
+    <footer>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
