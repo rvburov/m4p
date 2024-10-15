@@ -3,555 +3,641 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Авитолог</title>
+    <title>M4P</title>
     <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("iFi3ACL1CLcjK9xsQu"); // Замените на ваш Public Key
+        })();
+    </script>
 </head>
 <body>
     <header>
-        <div class="navigation">
-            <a href=""><img class="navigation-logo" src="logo/avitolog-logo.png" alt="Авитолог"></a>
-
-            <a href="#about-1" class="navigation-menu">О КОМПАНИИ</a>
-            <a href="#steps-of-work-group" class="navigation-menu">ЭТАПЫ РАБОТЫ</a>
-            <a href="#who-is-avitolog" class="navigation-menu">КТО ТАКОЙ АВИТОЛОГ?</a>
-            <a href="#work-examples" class="navigation-menu">ПРИМЕРЫ РАБОТЫ</a>
-            <a href="#contacts" class="navigation-menu">КОНТАКТЫ</a>
-            <a href="https://t.me/avitolog_org"><img class="navigation-logo-telegram" src="logo/telegram.png" alt="Telegram"></a>
-            <a href="https://wa.me/79959982728"><img class="navigation-logo-whatsapp" src="logo/whatsapp.png" alt="Whatsapp"></a>
+        <div class="container-navigation">
+            <div class="item-navigation">
+                <img class="navigation-logo-m4p" src="icons/logo-m4p.png" alt="">
+            </div>
+            <div class="item-navigation">
+                <a class="navigation" href="#id-products">Продукция</a>
+                <a class="navigation" href="#id-about-us">О компании</a>
+                <a class="navigation" href="#id-distributor">Сотрудничество</a>
+                <a class="navigation" href="#id-contacts">Контакты</a>
+            </div>
+            <div class="item-navigation">
+                <img class="navigation-phone-logo" src="icons/phone-call-navigation.png" alt="">
+                <a class="navigation-phone" href="+7(812)999-99-99">+7(812)999-99-99</a>
+            </div>
         </div>
-    </header>
-    <menu>
-        <section class="homepage-group">
-            <figure class="homepage">
-                <figcaption class="homepage-info">
-                    <a href=""><img class="homepage-logo-avitolog" src="logo/logo-avitolog.png" alt="Авитолог"></a>
-                    <p>получайте максимум клиентов с Авито</p>
-                    <div>
-                        <img class="homepage-logo" src="logo/check-mark.png" alt="Галка">
-                        <p>настройка и ведение аккаунта</p>
+        <div class="homepage">
+            <div>
+                <h1 class="homepage-name">
+                    ПРОИЗВОДСТВО ВЫСОКОКАЧЕСТВЕННЫХ РЕЗИНОВЫХ ИЗДЕЛИЙ
+                </h1>
+            </div>
+            <div class="homepage-container">
+                <div class="homepage-item">
+                    <div class="advantages-container">
+                        <div class="item-advantages">
+                            <img src="icons/ecology.png" alt="">
+                        </div>
+                        <div class="item-advantages">
+                            <h1>Экологичность:</h1>
+                            <p>
+                                Используем переработанные материалы, минимизируя вред для окружающей среды.
+                            </p>
+                        </div>
                     </div>
-                    <div>
-                        <img class="homepage-logo" src="logo/check-mark.png" alt="Галка">
-                        <p>масспостинг</p>
-                    </div>   
-                    <div> 
-                        <img class="homepage-logo" src="logo/check-mark.png" alt="Галка">
-                        <p>продвижение объявлений </p>
+                    <div class="advantages-container">
+                        <div class="item-advantages">
+                            <img src="icons/badge.png" alt="">
+                        </div>
+                        <div class="item-advantages">
+                            <h1>Высокое качество:</h1>
+                            <p>
+                                Современные технологии и строгий контроль на каждом этапе производства.
+                            </p>
+                        </div>
                     </div>
-                    <p>Помогаем бизнесу эффективно продавать на сайте объявлений №1</p>
-                    <a href="#contacts" class="homepage-button">ОСТАВИТЬ ЗАЯВКУ</a>
-                    <a href="#audit-container" class="homepage-button">БЕСПЛАТНЫЙ АУДИТ</a>
-                    <img class="homepage-logo-forward" src="logo/forward.png" alt="Галка">
-                </figcaption>
-                <img class="homepage-img" src="image/image-Photoroom.png" alt="">
-            </figure>
+                    <div class="advantages-container">
+                        <div class="item-advantages">
+                            <img src="icons/strength.png" alt="">
+                        </div>
+                        <div class="item-advantages">
+                            <h1>Долговечность:</h1>
+                            <p>
+                                Изделия устойчивы к износу и внешним воздействиям.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="advantages-container">
+                        <div class="item-advantages">
+                            <img src="icons/delivery.png" alt="">
+                        </div>
+                        <div class="item-advantages">
+                            <h1>Быстрая доставка:</h1>
+                            <p>
+                                Оперативные сроки производства и отгрузки.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="homepage-item" id="slider">
+                    <div class="catalog-container active">
+                        <h1>Резиновая плитка</h1>  
+                        <img src="image/plitka.jpg" alt="">   
+                        <button>
+                            <a href="#id-products" style="text-decoration: none; color: inherit;">ПЕРЕЙТИ В КАТАЛОГ</a>
+                        </button>                 
+                    </div>
+                    <div class="catalog-container">
+                        <h1>Протекторная лента</h1>  
+                        <img src="image/protector.png" alt="">   
+                        <button>
+                            <a href="#id-products" style="text-decoration: none; color: inherit;">ПЕРЕЙТИ В КАТАЛОГ</a>
+                        </button>                   
+                    </div>
+                    <div class="catalog-container">
+                        <h1>Резина</h1>  
+                        <img src="image/rezina.jpg" alt="">   
+                        <button>
+                            <a href="#id-products" style="text-decoration: none; color: inherit;">ПЕРЕЙТИ В КАТАЛОГ</a>
+                        </button>                    
+                    </div>
+                </div>
+            </div>
             <div id="audit-container" class="section-offset">
                 <div class="progress-bar">
                     <div class="progress" id="progress"></div>
                 </div>
                 <p id="question-counter">Вопрос 1 / 6</p>
                 <div class="audit-form" id="audit-form">
-                    <h2>Сделаем бесплатный аудит по Вашему виду бизнеса</h2>
-                    <p>Заполните короткую форму и получите анализ уже сегодня</p>
+                    <h2>Сделаем индивидуальное предложение</h2>
+                    <p>Заполните короткую форму и получите предложение о стоимости уже сегодня</p>
                     <form id="auditForm">
                         <div class="form-group">
-                            <label for="input-field" id="form-label">Вид бизнеса:</label>
-                            <input type="text" id="input-field" placeholder="Введите вид бизнеса" required>
-                        </div>
-                        <div class="form-group" id="xls-example-container" style="display: none;">
-                            <a href="#" id="xls-link">ПРИМЕР ОТЧЕТА XLS</a>
-                            <img id="xls-image" src="image/XLS.png" alt="Пример отчета XLS" style="display: none; margin-top: 10px; width: 100%; max-width: 600px;">
+                            <label for="input-field" id="form-label">Продукция:</label>
+                            <input type="text" id="input-field" placeholder="Выберите товар" required>
                         </div>
                         <p id="error-message" style="display: none; color: red; margin-top: 10px;"></p>
-                
+                        <button type="button" id="prev-btn" style="display: none;">Назад</button>
                         <button type="button" id="next-btn">Далее</button>
                     </form>
+                    
                 </div>
                 <div id="success-message" style="display: none; text-align: center;">
                     <h2>ЗАЯВКА ОТПРАВЛЕНА</h2>
                     <p>Спасибо за заполнение формы. Мы свяжемся с вами в ближайшее время.</p>
                 </div>
-            </div>                               
-        </section>
-        <section class="about-group">
-            <div>
-                <figure id="about-1" class="section-offset">
-                    <figcaption class="about-info1">
-                        <h1>О НАС</h1>
-                        <p>Наша команда собрана из качественных специалистов - авитологов, знающих свое дело. многие из наших коллег ранее работали в компании авито и знают все тонкости и специфику сайта изнутри. для вас мы предложим максимально выгодный вариант размещения и продвижения объявлений для получения максимальной активности.</p>
-                    </figcaption>
-                    <img class="about-img-1" src="image/about.png" alt="">
-                </figure>
-                <figure class="about-2">
-                    <img class="about-img-2" src="image/about-us.png" alt="">
-                    <figcaption class="about-info2">
-                        <div>
-                            <img class="about-logo" src="logo/switch-arrows.png" alt="Галка">
-                            <p>Мы настраиваем эффективную рекламу на досках объявлений (классифайдах);</p>
-                        </div>
-                        <div> 
-                            <img class="about-logo" src="logo/switch-arrows.png" alt="Галка">
-                            <p>Для многих компаний эти сайты играют основную роль в получении клиентов. наша задача — помочь бизнесу получать максимальную отдачу от работы на ключевых ресурсах.</p>
-                        </div>
-                        <div>
-                            <img class="about-logo" src="logo/switch-arrows.png" alt="Галка">
-                            <p>Площадки, с которыми мы работаем: avito, циан, юла, яндекс услуги и другие;</p>
-                        </div>   
-        
-                        <!-- Контейнер для изображений -->
-                        <div class="platforms-logos">
-                            <img src="logo/avito.png" alt="Avito">
-                            <img src="logo/cian.png" alt="Циан">
-                            <img src="logo/yula.png" alt="Юла">
-                            <img src="logo/yandex.png" alt="Яндекс Услуги">
-                        </div>
-                    </figcaption>
-                </figure>
             </div>
-        </section>
-        
-        <section class="steps-of-work">
-            <div>
-                <div id="steps-of-work-group" class="section-offset">
-                    <h1>ЭТАПЫ РАБОТЫ</h1>
-                    <p>ВАЖНО❗️Начало работы происходит только после подробного аудита, когда мы точно понимаем, что можем помочь бизнесу зарабатывать.</p>
-                    <div class="steps-of-work-container">
-                        <div class="steps-of-work-block">
-                            <div class="step-circle-arrow">
-                                <div class="step-circle">
-                                    <img class="steps-of-work-block-logo" src="logo/request.png" alt="">
-                                    <h2>1. ЗАЯВКА</h2>
-                                </div>
-                                <img class="steps-of-work-block-arrow-right-logo" src="logo/double-arrow.png" alt="">
-                            </div>
-                            <p>Оставьте заявку на сайте и профессиональный Авитолог свяжется с вами в течении часа и даст бесплатную консультацию.</p>
-                        </div>
-                        
-                        <div class="steps-of-work-block">
-                            <div class="step-circle-arrow">
-                                <div class="step-circle">
-                                    <img class="steps-of-work-block-logo" src="logo/audit.png" alt="">
-                                    <h2>2. АУДИТ</h2>
-                                </div>
-                                <img class="steps-of-work-block-arrow-right-logo" src="logo/double-arrow.png" alt="">
-                            </div>
-                            <p>Проводим бесплатный аудит конкурентов и рекламной кампании.</p>
-                        </div>
-        
-                        <div class="steps-of-work-block">
-                            <div class="step-circle-arrow">
-                                <div class="step-circle">
-                                    <img class="steps-of-work-block-logo" src="logo/setup account.png" alt="">
-                                    <h2>3. НАСТРОЙКА АККАУНТА</h2>
-                                </div>
-                                <img class="steps-of-work-block-arrow-right-logo" src="logo/double-arrow.png" alt="">
-                            </div>
-                            <p>Заполнение профиля. Составление продающего описания. Создание креативов и постинг объявлений.</p>
-                        </div>
-        
-                        <div class="steps-of-work-block">
-                            <div class="step-circle-arrow">
-                                <div class="step-circle">
-                                    <img class="steps-of-work-block-logo" src="logo/promotion.png" alt="">
-                                    <h2>4. ПРОДВИЖЕНИЕ</h2>
-                                </div>
-                                <img class="steps-of-work-block-arrow-right-logo" src="logo/double-arrow.png" alt="">
-                            </div>
-                            <p>Отслеживаем конкурентов и применяем услуги продвижения, чтобы получать больше заявок.</p>
-                        </div>
-        
-                        <div class="steps-of-work-block">
-                            <div class="step-circle-arrow">
-                                <div class="step-circle">
-                                    <img class="steps-of-work-block-logo" src="logo/report.png" alt="">
-                                    <h2>5. ОТЧЕТ</h2>
-                                </div>
-                            </div>
-                            <p>Анализируем результаты работы и ищем точки развития для роста в следующем месяце.</p>
-                        </div>
-                    </div>
-                </div>            
-                <div class="how-we-work">
-                    <div>
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/0_bxfvmBZKE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    </div>
-                    <div>
-                        <h1>КАК МЫ РАБОТАЕМ?</h1>
-                        <p>Выбирая avitolog.org, вы выбираете надежного партнера в настройке рекламы на Avito.
-                        <br>Наша команда помогает бизнесу достичь нужного результата и получить максимум целевых заявок по нужной цене.</p>
-                    </div>
-                </div>
-            </div>
-        </section>           
-        <section id="work-examples" class="section-offset">
-            <div class="work-examples-contaner">
+        </div>
+    </header>
+    <main>
+        <div id="id-products" class="products">
+            <h1 class="name-product">
+                ПРОДУКЦИЯ
+            </h1>
+            <figure class="item-product">
                 <div>
-                <h1>ПРИМЕРЫ РАБОТ</h1>
-                <p>За всю историю работы мы уже настроили более 700 рекламных кампаний в разных категориях. Ниже несколько свежих примеров работы с нами.</p>
-                <div class="statistics">
-                    <h2>СТАТИСТИКА</h2>
-                    <div>
-                        <img class="statistics-img" src="image/statistics/аренда авто.jpg" alt="">
-                        <img class="statistics-img" src="image/statistics/бытовки.jpg" alt="">
-                    </div>
+                    <h1>Модульная резиновая плитка</h1>
+                    <img src="image/plitka3.jpg" alt="">
+                    <p>Стоимость за 1 шт 3000₽</p>
+                    <button class="item-product-btn">ЗАКАЗАТЬ</button>
+                    
                 </div>
-                <div class="infographic">
-                    <h2>ИНФОГРАФИКА</h2>
-                    <div>
-                        <img class="infographic-img" src="image/infographic/1.jpg" alt="">
-                        <img class="infographic-img" src="image/infographic/2.jpg" alt="">
-                        <img class="infographic-img" src="image/infographic/3.jpg" alt="">
-                    </div>
+                <figcaption class="item-product-info">
+                    <h1>ХАРАКТЕРИСТИКИ:</h1>
+                    <ul>
+                        <li><strong>Наименование:</strong> резиновая плитка </li>
+                        <li><strong>Размеры:</strong> 500 x 500 мм, 1000 x 1000 мм.</li>
+                        <li><strong>Толщина:</strong> от 10 до 50 мм.</li>
+                        <li><strong>Материал:</strong> переработанная резина с полиуретановыми связующими.</li>
+                    </ul>
+
+                    <h1>ОПИСАНИЕ:</h1>
+                    <ul>
+                        <li>Резиновая плитка — прочный, амортизирующий материал для спортивных и детских площадок, устойчивый к влаге и УФ-лучам.</li>
+                    </ul>
+
+                    <h1>ОСОБЕННОСТИ:</h1>
+                    <ul>
+                        <li><strong>Противоскользящая</strong> и <strong>амортизирующая</strong> поверхность.</li>
+                        <li>Устойчива к погодным условиям.</li>
+                        <li>Легко монтируется и обслуживается.</li>
+                        <li>Экологически безопасная.</li>
+                    </ul>
+                </figcaption>
+                <div class="item-product-exemple">
+                    <img src="image/plitka1.jpg" alt="">
+                    <img src="image/plitka4.jpg" alt="">
+                    <img src="image/plitka.jpg" alt="">
                 </div>
-                </div>
-            </div>
-        </section>
-        <section class="tariff-group">
-            <div id="tariff" class="section-offset">
-                <div class="tariff-menu">
-                    <h1>ТАРИФЫ</h1>
-                    <p>Каждый тарифный план включает определенный набор услуг. Вам остается решить, какой объем работы мы будем делать за вас!</p>
-                </div>
-                <div class="tariff-container">
-                    <div class="tariff-item">
-                        <h1>БАЗОВЫЙ</h1>
-                        <hr>
-                        <h2>15000₽</h2>
-                        <hr>
-                        <p>Аудит конкурентов</p>
-                        <hr>
-                        <p>Подбор тарифа и стратегии продвижения</p>
-                        <hr>
-                        <p>Составление продающего текста</p>
-                        <hr>
-                        <p>Создание уникальных креативов</p>
-                        <hr>
-                        <p>Постинг объявлений</p>
-                        <hr>
-                        <p>Продвижение объявлений в поиске</p>
-                        <hr>
-                        <p>Работа со службой поддержки</p>
-                        <hr>
-                        <p>Отчет</p>
-                        <button class="tariff-block-button">ОСТАВИТЬ ЗАЯВКУ</button>
-                    </div>
-                    <div class="tariff-item">
-                        <h1>ОПТИМАЛЬНЫЙ</h1>
-                        <hr>
-                        <h2>20000₽</h2>
-                        <hr>
-                        <p>Аудит конкурентов</p>
-                        <hr>
-                        <p>Подбор тарифа и стратегии продвижения</p>
-                        <hr>
-                        <p>Составление продающего текста</p>
-                        <hr>
-                        <p>Создание уникальных креативов</p>
-                        <hr>
-                        <p>МАССПОСТИНГ объявлений</p>
-                        <hr>
-                        <p>Продвижение объявлений в поиске</p>
-                        <hr>
-                        <p>Помощь в интеграции с CRM</p>
-                        <hr>
-                        <p>Работа со службой поддержки</p>
-                        <hr>
-                        <p>Отчет</p>
-                        <button class="tariff-block-button">ОСТАВИТЬ ЗАЯВКУ</button>
-                    </div>
-                    <div class="tariff-item">
-                        <h1>МАКСИМАЛЬНЫЙ</h1>
-                        <hr>
-                        <h2>35000₽</h2>
-                        <hr>
-                        <p>Аудит конкурентов</p>
-                        <hr>
-                        <p>Подбор тарифа и стратегии продвижения</p>
-                        <hr>
-                        <p>Составление продающего текста</p>
-                        <hr>
-                        <p>Подбор фотографий</p>
-                        <hr>
-                        <p>Создание уникальных креативов</p>
-                        <hr>
-                        <p>Создание видео для объявлений</p>
-                        <hr>
-                        <p>МАССПОСТИНГ объявлений</p>
-                        <hr>
-                        <p>Продвижение объявлений в поиске</p>
-                        <hr>
-                        <p>Помощь в интеграции с CRM</p>
-                        <hr>
-                        <p>Работа со службой поддержки</p>
-                        <hr>
-                        <p>Отчет</p>
-                        <button class="tariff-block-button">ОСТАВИТЬ ЗАЯВКУ</button>
-                    </div>
-                </div>
-            </div>
-        </section>        
-        <section class="trust-certification">
-            <div>
-            <div class="trust">
-                    <h1>
-                        ПОЧЕМУ НАМ ДОВЕРЯЮТ
-                    </h1>
-                    <p>
-                       Наша задача - помочь бизнесу сконцентрироваться на выполнении основных задач и полностью освободиться от рутинной работы на всех площадках. Вам больше не придется звонить в поддержку, размещать объявления, отслеживать конкурентов, вникать в работу каждого нового продукта или изменения. Эту работу мы возьмем на себя!
-                    </p>
-                    <a href="#tariff" class="trust-button">СТОИМОСТЬ</a>
-            </div>
-            <div class="certification">
+            </figure>
+            <figure class="item-product">
                 <div>
-                    <h1>СЕРТИФИКАЦИЯ АВИТОЛОГОВ</h1>
-                    <p>
-                        Летом 2021 года сайт Авито провел сертификацию всех Авитологов России.
-                    </p>  
-                    <p>  
-                        Далеко не всем удалось пройти все этапы и получить отличительный знак - СЕРТИФИЦИРОВАННЫЙ АВИТОЛОГ.
-                    </p>
-                    <p>
-                        Сотрудники нашей компании подтвердили знания правил Авито, технологии работы сайта и показали обширный опыт работы в разных категориях бизнеса.
-                    </p>
-            
-                    <!-- Контейнер для изображений -->
-                    <div class="certification-img-container">
-                        <img class="certification-img" src="image/franc.png" alt="">
-                        <img class="certification-img" src="image/alexsandr.png" alt="">
+                    <h1>Модульная резиновая плитка</h1>
+                    <img src="image/plitka6.jpg" alt="">
+                    <p>Стоимость за 1 шт 3000₽</p>
+                    <button class="item-product-btn">ЗАКАЗАТЬ</button>
+                </div>
+                <figcaption class="item-product-info">
+                    <h1>ХАРАКТЕРИСТИКИ:</h1>
+                    <ul>
+                        <li><strong>Наименование:</strong> резиновая плитка </li>
+                        <li><strong>Размеры:</strong> 500 x 500 мм, 1000 x 1000 мм.</li>
+                        <li><strong>Толщина:</strong> от 10 до 50 мм.</li>
+                        <li><strong>Материал:</strong> переработанная резина с полиуретановыми связующими.</li>
+                    </ul>
+
+                    <h1>ОПИСАНИЕ:</h1>
+                    <ul>
+                        <li>Резиновая плитка — прочный, амортизирующий материал для спортивных и детских площадок, устойчивый к влаге и УФ-лучам.</li>
+                    </ul>
+
+                    <h1>ОСОБЕННОСТИ:</h1>
+                    <ul>
+                        <li><strong>Противоскользящая</strong> и <strong>амортизирующая</strong> поверхность.</li>
+                        <li>Устойчива к погодным условиям.</li>
+                        <li>Легко монтируется и обслуживается.</li>
+                        <li>Экологически безопасная.</li>
+                    </ul>
+                </figcaption>
+                <div class="item-product-exemple">
+                    <img src="image/plitka1.jpg" alt="">
+                    <img src="image/plitka4.jpg" alt="">
+                    <img src="image/plitka.jpg" alt="">
+                </div>
+            </figure>
+            <figure class="item-product">
+                <div>
+                    <h1>Модульная резиновая плитка</h1>
+                    <img src="image/plitka6.jpg" alt="">
+                    <p>Стоимость за 1 шт 3000₽</p>
+                    <button class="item-product-btn">ЗАКАЗАТЬ</button>
+                </div>
+                <figcaption class="item-product-info">
+                    <h1>ХАРАКТЕРИСТИКИ:</h1>
+                    <ul>
+                        <li><strong>Наименование:</strong> резиновая плитка </li>
+                        <li><strong>Размеры:</strong> 500 x 500 мм, 1000 x 1000 мм.</li>
+                        <li><strong>Толщина:</strong> от 10 до 50 мм.</li>
+                        <li><strong>Материал:</strong> переработанная резина с полиуретановыми связующими.</li>
+                    </ul>
+
+                    <h1>ОПИСАНИЕ:</h1>
+                    <ul>
+                        <li>Резиновая плитка — прочный, амортизирующий материал для спортивных и детских площадок, устойчивый к влаге и УФ-лучам.</li>
+                    </ul>
+
+                    <h1>ОСОБЕННОСТИ:</h1>
+                    <ul>
+                        <li><strong>Противоскользящая</strong> и <strong>амортизирующая</strong> поверхность.</li>
+                        <li>Устойчива к погодным условиям.</li>
+                        <li>Легко монтируется и обслуживается.</li>
+                        <li>Экологически безопасная.</li>
+                    </ul>
+                </figcaption>
+                <div class="item-product-exemple">
+                    <img src="image/plitka1.jpg" alt="">
+                    <img src="image/plitka4.jpg" alt="">
+                    <img src="image/plitka.jpg" alt="">
+                </div>
+            </figure>
+        </div>
+        <div id="id-about-us"class="about-us">
+            <h1 class="about-us-name">
+                О КОМПАНИИ
+            </h1>
+            <div class="about-us-holding-company">
+                <div class="about-us-holding-company-container">
+                    <div class="about-us-holding-company-block-1">
+                        <h1>ГУМИЛАБ</h1>
+                        <p>Собственная лаборатория и собственный учебный центр</p>
+                    </div>
+                    <div class="about-us-holding-company-block-2">
+                        <h1>ТЕХНОМА</h1>
+                        <p>Предприятие по сбору, сортировке, переработке вторичного сырья</p>
+                    </div>
+                    <div class="about-us-holding-company-block-3">
+                        <h1>A4P</h1>
+                        <p>Собственное производство из вторичного сырья</p>
+                    </div>
+                    <div class="about-us-holding-company-block-4">
+                        <img src="icons/logo-m4p.png" alt="">
                     </div>
                 </div>
             </div>
-            <div class="info">
-                <div class="info-item">
-                    <img class="steps-of-work-block-logo" src="logo/account.png" alt="">
-                    <h1>
-                        ВЕДЕНИЕ АККАУНТА
-                    </h1>
-                    <p>
-                        Избавьте себя от рутины и доверьте работу профессионалам
-                    </p>
-                </div>
-                <div class="info-item">
-                    <img class="steps-of-work-block-logo" src="logo/promotion.png" alt="">
-                    <h1>
-                        ПРОДВИЖЕНИЕ
-                    </h1>
-                    <p>
-                        Подбор сервисов продвижения и стратегии размещения, основываясь на конкуренции и ваших потребностях
-                    </p>
-                </div>
-                <div class="info-item">
-                    <img class="steps-of-work-block-logo" src="logo/request.png" alt="">
-                    <h1>
-                        ОБЪЯВЛЕНИЯ
-                    </h1>
-                    <p>
-                        Уникальные креативы, продающее описание, подбор заголовков, поисковых запросов и Масспостинг
-                    </p>
-                </div>
-                <div class="info-item">
-                    <img class="steps-of-work-block-logo" src="logo/report.png" alt="">
-                    <h1>
-                        АНАЛИТИКА
-                    </h1>
-                    <p>
-                        Принимаем решение, основываясь на данных Avito PRO и Call-tracking. Ищем точки роста и развития
-                    </p>
-                </div>
-            </div>
-            </div>
-        </section>
-        <section class="reviews-group">
-            <div class="reviews">
-                <h1>
-                    РЕАЛЬНЫЕ ОТЗЫВЫ
-                </h1>
-                <div class="reviews-block">
-                    <img class="reviews-logo" src="image/askona.png" alt="">
-                    <p>
-                        Хочу выразить благодарность Александру и его команде.
-                        Сотрудничаем уже около года с разными направлениями нашего бизнеса.
-                        За это время стали уверенными лидерами в нашем направлении на сайте Авито и получаем достаточный объем заявок по хорошей стоимости.
-                        Компания соблюдает все договоренности и полностью выполняет свои обязательства, которые прописаны в договоре!
-                        Так же, плюс, что можем работать по ЭДО, это удобно. Рекомендую к сотрудничеству 👍🏻<br>
-                        <span class="author">Анастасия</span>
-                    </p>
-                </div>
-            </div>
-        </section>
-        <section id="who-is-avitolog" class="section-offset">
-            <div class="trust-the-work">
-                <h1>ДОВЕРЬТЕ РАБОТУ С ПЛОЩАДКАМИ ПРОФЕССИОНАЛАМ</h1>
-                <p>
-                    На сегодняшний день, профессиональное ведение рекламы на сайтах объявлений Авито, ЦИАН, Яндекс и Юла способно приносить постоянный поток целевых клиентов, но только при постоянном контроле рекламной кампании. Работая с нами, вы получаете высокое качество настройки рекламы, экономите большое количество времени и денег, сразу получаете нужный результат. 
-                </p>
-                <div class="trust-the-work-container">
-                    <div class="trust-the-work-block">
-                        <img class="trust-the-work-logo" src="logo/avitolog-logo.png" alt="Avitolog Logo">
-                        <h2>AVITOLOG.ORG</h2>
-                        <p>
-                            Avitolog.org - рекламное агентство, специализирующееся на настройке рекламы на Авито. Мы гордимся нашей компетентностью, эффективностью и вниманием к срокам. Наша команда всегда на связи, чтобы помочь вам достичь максимальных результатов в рекламе на Авито.
+            <div class="about-us-history">
+                <div class="about-us-history-container">
+                    <div class="about-us-history-block about-us-history-block-1">
+                        <p class="about-us-history-block1">
+                            Наш холдинг начал своё развитие в 2021 году с небольшой мастерской по производству резиновых уплотнителей, ориентированных на нужды местных предприятий. Со временем, опираясь на опыт и постоянное совершенствование технологий, мы расширили производственные мощности и стали лидерами в отрасли. Сегодня в составе нашего холдинга несколько компаний, которые разрабатывают и выпускают широкий ассортимент высококачественных резиновых изделий для различных отраслей промышленности, включая машиностроение, строительство и сельское хозяйство. Мы гордимся тем, что наши решения помогают партнёрам улучшать производственные процессы и достигать новых высот в своей деятельности, обеспечивая надежность и долгосрочную эффективность.
                         </p>
                     </div>
-                    <div class="accordion">
-                        <!-- Первый блок -->
-                        <div class="accordion-item">
-                            <input type="checkbox" id="accordion-1" class="accordion-toggle">
-                            <label for="accordion-1" class="accordion-header">
-                                <span class="icon">?</span> КТО ТАКОЙ АВИТОЛОГ
-                            </label>
-                            <div class="accordion-content">
-                                <p>
-                                    Авитолог - это удаленный сотрудник компании, который отвечает за настройку рекламы и поток обращений с Авито и других досок объявлений.
-                                    Авитолог берет на себя всю работу с площадкой под ключ:
-                                    <br>- Изучает рынок, анализирует предложения конкурентов.
-                                    <br>- Создает описание объявлений, учитывая алгоритмы площадки.
-                                    <br>- Анализирует ключевые запросы.
-                                    <br>- Публикует объявления.
-                                    <br>- Разрабатывает стратегию и продвигает объявления.
-                                    <br>- Готовит отчетность о проделанной работе.
-                                    <br> Сотрудничество с авитологом подойдет компаниям и предпринимателям, которые хотят увеличить поток клиентов с площадок объявлений, но не имеют времени или ресурсов для самостоятельной настройки и ведения рекламы. Авитолог поможет эффективно использовать возможности Авито и других площадок для достижения ваших бизнес-целей.
-                                </p>
-                            </div>
-                        </div>
+                    <div class="about-us-history-block">
+                        <h1>
+                            25%
+                        </h1>
+                        <h2>
+                            Доля на рынке
+                        </h2>
+                    </div>
+                    <div class="about-us-history-block">
+                        <h3>
+                            5 000 тонн
+                        </h3>
+                        <h4>
+                            Годовой объем производства
+                        </h4>
+                    </div>
+                    <div class="about-us-history-block">
+                        <h3>
+                            2 000 м²
+                        </h3>
+                        <h4>
+                            Площадь производственных мощностей
+                        </h4>
+                    </div>
+                    <div class="about-us-history-block">
+                        <h3>
+                            22
+                        </h3>
+                        <h4>
+                            Партнёрские предприятия
+                        </h4>
+                    </div>
+                </div>   
+            </div>
+            <div class="about-us-production">
+                <h1>
+                    НАШИ ТЕХНОЛОГИИ
+                </h1>
+                <div class="about-us-production-container">
+                    <!-- Блок с изображением -->
+                    <div class="about-us-production-block-1">
+                        <img src="image/tehnoma-eco.jpg" alt="Изображение переработки сырья">
+                    </div>
             
-                        <!-- Второй блок -->
-                        <div class="accordion-item">
-                            <input type="checkbox" id="accordion-2" class="accordion-toggle">
-                            <label for="accordion-2" class="accordion-header">
-                                <span class="icon">?</span> КОМУ ПОДОЙДЕТ СОТРУДНИЧЕСТВО С АВИТОЛОГОМ
-                            </label>
-                            <div class="accordion-content">
-                                <p>
-                                    Основных случая три:
-                                    <br>- Только начинаете;
-                                    <br>- Нужно больше: у вас есть действующее размещение, но вы не довольны результатами;
-                                    <br>- Хотите делегировать: у вас нет времени на изучение особенностей работы с площадками.
-                                </p>
-                            </div>
-                        </div>
+                    <!-- Переработка сырья -->
+                    <div class="about-us-production-block-2">
+                        <h1>Переработка сырья</h1>
+                        <p><strong>Сбор и сортировка:</strong> Сырьё (натуральный и синтетический каучук, вторичные материалы) поступает на предприятие, где проходит сортировку и очистку от примесей.</p>
+                        <p><strong>Дробление и грануляция:</strong> Применяются дробильные установки и грануляторы для переработки крупного сырья в гранулы или порошки. Этот процесс позволяет создать однородный материал для дальнейшего использования.</p>
+                        <p><strong>Мешение и смешивание:</strong> Используются высокоскоростные мешалки и смесители, такие как двухвалковые мельницы и внутрироторные смесители, для равномерного распределения добавок и получения резиновой смеси с нужными свойствами.</p>
+                        <p><strong>Технология восстановления:</strong> Применение пиролиза или механического измельчения для переработки отработанных резиновых изделий и восстановления их исходных свойств.</p>
+                    </div>
             
-                        <!-- Третий блок -->
-                        <div class="accordion-item">
-                            <input type="checkbox" id="accordion-3" class="accordion-toggle">
-                            <label for="accordion-3" class="accordion-header">
-                                <span class="icon">?</span> СКОЛЬКО ВРЕМЕНИ НУЖНО ДЛЯ СТАРТА РАБОТЫ
-                            </label>
-                            <div class="accordion-content">
-                                <p>
-                                    Обычно на подготовку мы берем 2-3 рабочих дня. За это время готовится описание, креативы и оформляется профиль.
-                                </p>
-                            </div>
-                        </div>
+                    <!-- Лабораторные исследования -->
+                    <div class="about-us-production-block-3">
+                        <h1>Лабораторные исследования</h1>
+                        <p><strong>Физико-механические испытания:</strong> Использование универсальных тестеров для проверки прочности, эластичности и твердости резиновых смесей в соответствии с международными стандартами.</p>
+                        <p><strong>Анализ состава:</strong> Спектрометрия и хроматография для определения точного химического состава и контроля уровня примесей в готовом материале.</p>
+                        <p><strong>Тепловые и климатические испытания:</strong> Оценка устойчивости резины к температурным изменениям и воздействию агрессивных сред с использованием термокамер и климатических установок.</p>
+                        <p><strong>Оптимизация формулы:</strong> Компьютерное моделирование и разработка новых рецептур резиновых композиций для улучшения их эксплуатационных характеристик.</p>
+                    </div>
             
-                        <!-- Четвертый блок -->
-                        <div class="accordion-item">
-                            <input type="checkbox" id="accordion-4" class="accordion-toggle">
-                            <label for="accordion-4" class="accordion-header">
-                                <span class="icon">?</span> ЧТО ОТ МЕНЯ НУЖНО ДЛЯ СТАРТА РАБОТЫ
-                            </label>
-                            <div class="accordion-content">
-                                <p>
-                                    Полная информация о товаре/услуге и цены. Ссылки на сайт и социальные сети. Доступы к аккаунту Авито. Фото и видео.
-                                </p>
-                            </div>
-                        </div>
+                    <!-- Блок с изображением -->
+                    <div class="about-us-production-block-4">
+                        <img src="image/gubilab-laboratoria.jpg" alt="Изображение лабораторных исследований">
+                    </div>
             
-                        <!-- Пятый блок -->
-                        <div class="accordion-item">
-                            <input type="checkbox" id="accordion-5" class="accordion-toggle">
-                            <label for="accordion-5" class="accordion-header">
-                                <span class="icon">?</span> КОГДА Я НАЧНУ ПОЛУЧАТЬ ЗАЯВКИ
-                            </label>
-                            <div class="accordion-content">
-                                <p>
-                                    В большинстве ниш первые заявки можно получить в течение первой недели. Если спрос большой, то уже на третий-четвертый день.
-                                </p>
-                            </div>
-                        </div>
+                    <!-- Блок с изображением -->
+                    <div class="about-us-production-block-5">
+                        <img src="image/A4P-production.jpg" alt="Изображение производства">
+                    </div>
             
-                        <!-- Шестой блок -->
-                        <div class="accordion-item">
-                            <input type="checkbox" id="accordion-6" class="accordion-toggle">
-                            <label for="accordion-6" class="accordion-header">
-                                <span class="icon">?</span> ОФОРМЛЯЕМ ЛИ ДОГОВОР
-                            </label>
-                            <div class="accordion-content">
-                                <p>
-                                    Да, всегда. Напишите нам, если предварительно хотите ознакомиться с шаблоном договора.
-                                </p>
-                            </div>
+                    <!-- Производство -->
+                    <div class="about-us-production-block-6">
+                        <h1>Производство</h1>
+                        <p><strong>Формовка:</strong> Используются автоматизированные пресс-формы и литьевые машины для создания деталей заданной формы и размеров. Формовка может включать экструзию, инжекционное литье и прессование.</p>
+                        <p><strong>Вулканизация:</strong> Процесс вулканизации проводится в автоклавах или прессах при высокой температуре и давлении, что обеспечивает укрепление и увеличение прочности резиновых изделий.</p>
+                        <p><strong>Финишная обработка:</strong> Обрезка, шлифовка и удаление лишнего материала с готовых изделий для достижения высокого уровня точности и эстетичного внешнего вида.</p>
+                        <p><strong>Контроль качества:</strong> Продукция проходит финальный контроль с использованием автоматизированных систем визуального и механического тестирования для подтверждения соответствия требованиям стандарта ISO и других нормативных документов.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="partners">
+                <h1>НАШИ ПАРТНЕРЫ</h1>
+                <div>
+                    <img src="image/partners.jpg" alt="">
+                    <img src="image/partners.jpg" alt="">
+                    <img src="image/partners.jpg" alt="">
+                    <img src="image/partners.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <div id="id-distributor" class="distributor">
+            <h1 class="distributor-name">
+                СОТРУДНИЧЕСТВО
+            </h1>
+            <p>
+                Наша миссия — развитие российского производства и установление надежного партнерства в создании высококачественных резиновых изделий для различных отраслей. Мы стремимся к постоянному совершенствованию технологий, точному соблюдению сроков и поиску оптимальных решений для наших клиентов. Наша команда всегда готова поддержать вас на каждом этапе сотрудничества, обеспечивая долгосрочные и взаимовыгодные отношения.
+            </p>
+            <h1 class="distributor-name">
+                Дистрибьюторам
+            </h1>
+            <div class="trust-the-work-container">
+                <div class="trust-the-work-block">
+                    <img class="trust-the-work-logo" src="icons/logo-m4p.png" alt="Avitolog Logo">
+                    <p>
+                        «Качество. Надежность. Экологичность. Инновации в каждом изделии.»
+                    </p>
+                </div>
+                <div class="accordion">
+                    <!-- Первый блок -->
+                    <div class="accordion-item">
+                        <input type="checkbox" id="accordion-1" class="accordion-toggle">
+                        <label for="accordion-1" class="accordion-header">
+                            <span class="icon">?</span> ПРЕИМУЩЕСТВА СОТРУДНИЧЕСТВА
+                        </label>
+                        <div class="accordion-content">
+                            <p><strong>Конкурентные цены и скидки:</strong> Специальные условия ценообразования, включая гибкие скидки в зависимости от объёма закупок.</p>
+                            <p><strong>Широкий ассортимент продукции:</strong> Обширный выбор резиновых изделий для различных отраслей, позволяющий удовлетворить потребности клиентов.</p>
+                            <p><strong>Маркетинговая поддержка:</strong> Рекламные материалы, информационные буклеты и каталоги для продвижения продукции.</p>
+                            <p><strong>Техническая поддержка:</strong> Консультации и обучение по использованию изделий и работе с клиентами.</p>
+                            <p><strong>Индивидуальные условия сотрудничества:</strong> Рассмотрение индивидуальных предложений и условий для партнёров.</p>
                         </div>
-            
-                        <!-- Седьмой блок -->
-                        <div class="accordion-item">
-                            <input type="checkbox" id="accordion-7" class="accordion-toggle">
-                            <label for="accordion-7" class="accordion-header">
-                                <span class="icon">?</span> КАКИЕ ГАРАНТИИ
-                            </label>
-                            <div class="accordion-content">
-                                <p>
-                                    В нашем договоре мы детально фиксируем сроки и объемы работ. Гарантируем, что работы будут выполнены в указанный срок и в полном объеме. Или вернем деньги.
-                                </p>
-                            </div>
+                    </div>
+                
+                    <!-- Второй блок -->
+                    <div class="accordion-item">
+                        <input type="checkbox" id="accordion-2" class="accordion-toggle">
+                        <label for="accordion-2" class="accordion-header">
+                            <span class="icon">?</span> ЭТАПЫ РАБОТЫ
+                        </label>
+                        <div class="accordion-content">
+                            <p><strong>Первичный контакт:</strong> Обсуждение условий сотрудничества и заключение договора.</p>
+                            <p><strong>Анализ потребностей:</strong> Совместный анализ целевого рынка и нужд клиентов.</p>
+                            <p><strong>Заказ и производство:</strong> Обработка заказов и запуск производства.</p>
+                            <p><strong>Контроль качества:</strong> Проверка готовой продукции перед отправкой.</p>
+                            <p><strong>Отгрузка и доставка:</strong> Своевременная отгрузка продукции и поддержка после поставки.</p>
                         </div>
-                        <!-- Восьмой блок -->
-                        <div class="accordion-item">
-                            <input type="checkbox" id="accordion-8" class="accordion-toggle">
-                            <label for="accordion-8" class="accordion-header">
-                                <span class="icon">?</span> КАК ВЗАИМОДЕЙСТВУЕМ
-                            </label>
-                            <div class="accordion-content">
-                                <p>
-                                    Закрепляем за вами личного менеджера. Общаемся в удобном вам мессенджере и в удобное для вас время (с поправками на часовые пояса). Присылаем регулярные отчеты о проделанной работе и полученных результатах.
-                                </p>
-                            </div>
+                    </div>
+                
+                    <!-- Третий блок -->
+                    <div class="accordion-item">
+                        <input type="checkbox" id="accordion-3" class="accordion-toggle">
+                        <label for="accordion-3" class="accordion-header">
+                            <span class="icon">?</span> ЦЕНООБРАЗОВАНИЕ И УСЛОВИЯ ОПЛАТЫ ПРИ СОТРУДНИЧЕСТВЕ
+                        </label>
+                        <div class="accordion-content">
+                            <p><strong>Гибкость в ценообразовании:</strong> Индивидуальный подход к формированию цен в зависимости от объёмов заказов.</p>
+                            <p><strong>Специальные предложения:</strong> Дополнительные скидки и акции для постоянных партнёров.</p>
+                            <p><strong>Удобные условия оплаты:</strong> Возможность отсрочки платежей и работа по предоплате или постоплате.</p>
+                        </div>
+                    </div>
+                
+                    <!-- Четвертый блок -->
+                    <div class="accordion-item">
+                        <input type="checkbox" id="accordion-4" class="accordion-toggle">
+                        <label for="accordion-4" class="accordion-header">
+                            <span class="icon">?</span> ЛОГИСТИКА И ДОСТАВКА ПРОДУКЦИИ
+                        </label>
+                        <div class="accordion-content">
+                            <p><strong>Проверенные логистические партнёры:</strong> Работаем с надёжными транспортными компаниями для минимизации сроков доставки.</p>
+                            <p><strong>Гибкость в способах доставки:</strong> Возможность выбора оптимального способа транспортировки.</p>
+                            <p><strong>Контроль за грузом:</strong> Отслеживание статуса заказа на всех этапах доставки.</p>
+                        </div>
+                    </div>
+                
+                    <!-- Пятый блок -->
+                    <div class="accordion-item">
+                        <input type="checkbox" id="accordion-5" class="accordion-toggle">
+                        <label for="accordion-5" class="accordion-header">
+                            <span class="icon">?</span> ПОДДЕРЖКА И ОБУЧЕНИЕ ДЛЯ ПАРТНЁРОВ
+                        </label>
+                        <div class="accordion-content">
+                            <p><strong>Обучающие программы:</strong> Тренинги и семинары по использованию нашей продукции.</p>
+                            <p><strong>Технические консультации:</strong> Связь с нашими специалистами для решения технических вопросов.</p>
+                            <p><strong>Помощь в продажах:</strong> Советы по эффективному продвижению продукции.</p>
+                        </div>
+                    </div>
+                
+                    <!-- Шестой блок -->
+                    <div class="accordion-item">
+                        <input type="checkbox" id="accordion-6" class="accordion-toggle">
+                        <label for="accordion-6" class="accordion-header">
+                            <span class="icon">?</span> МАРКЕТИНГОВАЯ ПОДДЕРЖКА ОТ НАШЕЙ КОМПАНИИ
+                        </label>
+                        <div class="accordion-content">
+                            <p><strong>Рекламные материалы:</strong> Каталоги продукции, буклеты и презентации.</p>
+                            <p><strong>Совместные маркетинговые кампании:</strong> Помощь в организации и проведении рекламных акций.</p>
+                            <p><strong>Поддержка в онлайн-продвижении:</strong> Консультации по цифровому маркетингу.</p>
+                        </div>
+                    </div>
+                
+                    <!-- Седьмой блок -->
+                    <div class="accordion-item">
+                        <input type="checkbox" id="accordion-7" class="accordion-toggle">
+                        <label for="accordion-7" class="accordion-header">
+                            <span class="icon">?</span> ТЕХНИЧЕСКИЕ ВОПРОСЫ И СПЕЦИФИКАЦИИ ПРОДУКЦИИ
+                        </label>
+                        <div class="accordion-content">
+                            <p><strong>Соответствие международным стандартам:</strong> Вся продукция проходит сертификацию по стандартам ISO.</p>
+                            <p><strong>Контроль качества на всех этапах:</strong> Многоуровневые проверки на всех стадиях производства.</p>
+                            <p><strong>Адаптация под требования:</strong> Возможность адаптировать продукцию под специфические требования клиентов.</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <section class="contacts-group">
-            <div id="contacts" class="section-offset">
-                <div class="contacts-content">
+            <h1 class="distributor-name">
+                Поставщикам
+            </h1>
+            <div class="trust-the-work-container">
+                <div class="trust-the-work-block">
+                    <img class="trust-the-work-logo" src="icons/logo-m4p.png" alt="Avitolog Logo">
+                    <p>
+                        «Качество. Надежность. Экологичность. Инновации в каждом изделии.»
+                    </p>
+                </div>
+                <div class="accordion">
+                    <!-- Первый блок -->
+                    <div class="accordion-item">
+                        <input type="checkbox" id="accordion-1" class="accordion-toggle">
+                        <label for="accordion-1" class="accordion-header">
+                            <span class="icon">?</span> ПРЕИМУЩЕСТВА СОТРУДНИЧЕСТВА
+                        </label>
+                        <div class="accordion-content">
+                            <p><strong>Конкурентные цены и скидки:</strong> Специальные условия ценообразования, включая гибкие скидки в зависимости от объёма закупок.</p>
+                            <p><strong>Широкий ассортимент продукции:</strong> Обширный выбор резиновых изделий для различных отраслей, позволяющий удовлетворить потребности клиентов.</p>
+                            <p><strong>Маркетинговая поддержка:</strong> Рекламные материалы, информационные буклеты и каталоги для продвижения продукции.</p>
+                            <p><strong>Техническая поддержка:</strong> Консультации и обучение по использованию изделий и работе с клиентами.</p>
+                            <p><strong>Индивидуальные условия сотрудничества:</strong> Рассмотрение индивидуальных предложений и условий для партнёров.</p>
+                        </div>
+                    </div>
+                
+                    <!-- Второй блок -->
+                    <div class="accordion-item">
+                        <input type="checkbox" id="accordion-2" class="accordion-toggle">
+                        <label for="accordion-2" class="accordion-header">
+                            <span class="icon">?</span> ЭТАПЫ РАБОТЫ
+                        </label>
+                        <div class="accordion-content">
+                            <p><strong>Первичный контакт:</strong> Обсуждение условий сотрудничества и заключение договора.</p>
+                            <p><strong>Анализ потребностей:</strong> Совместный анализ целевого рынка и нужд клиентов.</p>
+                            <p><strong>Заказ и производство:</strong> Обработка заказов и запуск производства.</p>
+                            <p><strong>Контроль качества:</strong> Проверка готовой продукции перед отправкой.</p>
+                            <p><strong>Отгрузка и доставка:</strong> Своевременная отгрузка продукции и поддержка после поставки.</p>
+                        </div>
+                    </div>
+                
+                    <!-- Третий блок -->
+                    <div class="accordion-item">
+                        <input type="checkbox" id="accordion-3" class="accordion-toggle">
+                        <label for="accordion-3" class="accordion-header">
+                            <span class="icon">?</span> ЦЕНООБРАЗОВАНИЕ И УСЛОВИЯ ОПЛАТЫ ПРИ СОТРУДНИЧЕСТВЕ
+                        </label>
+                        <div class="accordion-content">
+                            <p><strong>Гибкость в ценообразовании:</strong> Индивидуальный подход к формированию цен в зависимости от объёмов заказов.</p>
+                            <p><strong>Специальные предложения:</strong> Дополнительные скидки и акции для постоянных партнёров.</p>
+                            <p><strong>Удобные условия оплаты:</strong> Возможность отсрочки платежей и работа по предоплате или постоплате.</p>
+                        </div>
+                    </div>
+                
+                    <!-- Четвертый блок -->
+                    <div class="accordion-item">
+                        <input type="checkbox" id="accordion-4" class="accordion-toggle">
+                        <label for="accordion-4" class="accordion-header">
+                            <span class="icon">?</span> ЛОГИСТИКА И ДОСТАВКА ПРОДУКЦИИ
+                        </label>
+                        <div class="accordion-content">
+                            <p><strong>Проверенные логистические партнёры:</strong> Работаем с надёжными транспортными компаниями для минимизации сроков доставки.</p>
+                            <p><strong>Гибкость в способах доставки:</strong> Возможность выбора оптимального способа транспортировки.</p>
+                            <p><strong>Контроль за грузом:</strong> Отслеживание статуса заказа на всех этапах доставки.</p>
+                        </div>
+                    </div>
+                
+                    <!-- Пятый блок -->
+                    <div class="accordion-item">
+                        <input type="checkbox" id="accordion-5" class="accordion-toggle">
+                        <label for="accordion-5" class="accordion-header">
+                            <span class="icon">?</span> ПОДДЕРЖКА И ОБУЧЕНИЕ ДЛЯ ПАРТНЁРОВ
+                        </label>
+                        <div class="accordion-content">
+                            <p><strong>Обучающие программы:</strong> Тренинги и семинары по использованию нашей продукции.</p>
+                            <p><strong>Технические консультации:</strong> Связь с нашими специалистами для решения технических вопросов.</p>
+                            <p><strong>Помощь в продажах:</strong> Советы по эффективному продвижению продукции.</p>
+                        </div>
+                    </div>
+                
+                    <!-- Шестой блок -->
+                    <div class="accordion-item">
+                        <input type="checkbox" id="accordion-6" class="accordion-toggle">
+                        <label for="accordion-6" class="accordion-header">
+                            <span class="icon">?</span> МАРКЕТИНГОВАЯ ПОДДЕРЖКА ОТ НАШЕЙ КОМПАНИИ
+                        </label>
+                        <div class="accordion-content">
+                            <p><strong>Рекламные материалы:</strong> Каталоги продукции, буклеты и презентации.</p>
+                            <p><strong>Совместные маркетинговые кампании:</strong> Помощь в организации и проведении рекламных акций.</p>
+                            <p><strong>Поддержка в онлайн-продвижении:</strong> Консультации по цифровому маркетингу.</p>
+                        </div>
+                    </div>
+                
+                    <!-- Седьмой блок -->
+                    <div class="accordion-item">
+                        <input type="checkbox" id="accordion-7" class="accordion-toggle">
+                        <label for="accordion-7" class="accordion-header">
+                            <span class="icon">?</span> ТЕХНИЧЕСКИЕ ВОПРОСЫ И СПЕЦИФИКАЦИИ ПРОДУКЦИИ
+                        </label>
+                        <div class="accordion-content">
+                            <p><strong>Соответствие международным стандартам:</strong> Вся продукция проходит сертификацию по стандартам ISO.</p>
+                            <p><strong>Контроль качества на всех этапах:</strong> Многоуровневые проверки на всех стадиях производства.</p>
+                            <p><strong>Адаптация под требования:</strong> Возможность адаптировать продукцию под специфические требования клиентов.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Форма заявки на сотрудничество -->
+            <div class="contact-form">
+                <h2>ОСТАВТЕ ЗАЯВКУ ПО ВОПРОСАМ СОТРУДНИЧЕСТВА</h2>
+                <form action="submit_form.php" method="post">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Введите ваше имя" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" name="phone" placeholder="Введите ваш телефон" required>
+                    </div>
+                    <div class="button-container">
+                        <button type="submit">ОТПРАВИТЬ ЗАЯВКУ</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div id="id-contacts" class="contacts">
+            <h1 class="name-contacts">
+                КОНТАКТЫ
+            </h1>
+            <div class="contacts-container">
+                <div class="block-1">
                     <h1>
                         Контакты
                     </h1>
-                    <a href="https://yandex.ru/maps/org/avitolog_org/103997925849/?ll=30.420211%2C59.923109&z=15.58"><img class="contacts-logo" src="logo/address.png" alt="address">г. Санкт-Петербург, Новочеркасский проспект д. 58, офис 207.</a>
-                    <a href=""><img class="contacts-logo" src="logo/email.png" alt="email">info@avitolog.org</a>
-                    <a href=""><img class="contacts-logo" src="logo/phone-call.png" alt="phone-call">+7(812)467-84-48</a>
-                        <div class="messenger-item">
-                            <a href="https://t.me/avitolog_org"><img class="messenger-logo" src="logo/telegram.png" alt="telegram"></a>
-                            <a href="https://wa.me/79959982728"><img class="messenger-logo" src="logo/whatsapp.png" alt="whatsapp"></a>
-                            <a href="https://www.facebook.com/Avitolog.org"><img class="messenger-logo" src="logo/facebook.png" alt="facebook"></a>
-                            <a href="https://www.instagram.com/avitologorg"><img class="messenger-logo" src="logo/instagram.png" alt="instagram"></a>
-                            <a href="https://vk.com/avitologorg"><img class="messenger-logo" src="logo/vk.png" alt="vk"></a>
-                            <a href="https://www.youtube.com/@avitologorg"><img class="messenger-logo" src="logo/youtube.png" alt="youtube"></a>
-                        </div>
+                    <a href=""><img class="contacts-logo" src="icons/address.png" alt="address">г. Санкт-Петербург, Новочеркасский проспект д. 58, офис 207.</a>
+                    <a href=""><img class="contacts-logo" src="icons/email.png" alt="email">info@m4p.ru</a>
+                    <a href=""><img class="contacts-logo" src="icons/phone-call.png" alt="phone-call">+7(812)467-84-48</a>
+                    <h1>
+                        Реквизиты
+                    </h1>
+                    <p><strong>Наимнование: </strong>ООО ГУМИЛАБ</p>
+                    <p><strong>ИНН: </strong>7807245876</p>
+                    <p><strong>ОГРН: </strong>1217800011461</p>
+                    <p><strong>Наименование банка: </strong>ПАО Сбербанк</p>
+                    <p><strong>БИК: </strong>044030653</p>
+                    <p><strong>Корреспондентский счет: </strong>30101810500000000653</p>
+                    <p><strong>Расчетный счет: </strong></p>
+                    <p><strong>Юридический адрес: </strong>г. Санкт-Петербург, г. Пушкин, Московская ул., д. 25</p>
+                    <p><strong>Фактический адрес: </strong>г. Санкт-Петербург, г. Пушкин, Московская ул., д. 25</p>
                 </div>
-                <div class="contacts-form">
-                    <h2>Отправте заявку и получите бесплатную консультацию</h2>
-                    <form action="" method="post" enctype="">
-                        <div class="contacts-form-group">
-                            <input type="text" id="name" name="name" placeholder="Имя" required>
-                        </div>
-                        <div class="contacts-form-group">
-                            <input type="text" id="surname" name="surname" placeholder="Фамилия" required>
-                        </div>
-                        <div class="contacts-form-group">
-                            <input type="phone" id="phone" name="phone" placeholder="Телефона" required>
-                        </div>
-                        <div class="contacts-form-group">
-                            <input type="email" id="email" name="email" placeholder="Электронная почта" required>
-                        </div>
-                        <button type="submit">Отправить заявку</button>
-                    </form>
+                <div class="block-2">
+                    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A6c30af56449c8bdeab9dd59bc8f1a81a0e199816e18df653ccfbdfb8c56484bc&amp;source=constructor" 
+                            width="100%" 
+                            height="100%" 
+                            frameborder="0"></iframe>
                 </div>
             </div>
-        </section>
-    </menu>
-    <footer>
+        </div>
     </footer>
     <script src="script.js"></script>
 </body>
