@@ -30,7 +30,6 @@ header, main, footer {
     max-width: 1300px; /* Фиксированная максимальная ширина для хедера и других блоков */
 }
 
-/* Хедер */
 header {
     padding-bottom: 30px;
     padding-top: 40px;
@@ -181,17 +180,18 @@ header {
 
 /* ФОРМА ДЛЯ ЗАЯВКИ */
 
-#audit-container {
+/* Универсальный стиль для обоих форм */
+.section-offset {
     background-color: rgba(39, 39, 39, 0.8);
     padding: 40px 60px 40px 40px;
     max-width: 1050px;
-    margin: 0 auto;
+    width: 100%;
+    margin: 20px auto; /* Отступ между формами */
     border-radius: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-
 }
 
-/* Прогресс-бар */
+/* Прогресс-бар для обеих форм */
 .progress-bar {
     background-color: #f1f1f1;
     border-radius: 5px;
@@ -202,19 +202,20 @@ header {
 
 .progress {
     height: 100%;
-    width: 20%; /* Изначальный прогресс */
+    width: 20%;
     background-color: #4caf50;
 }
 
-/* Вопрос */
-#question-counter {
+/* Вопросы для обеих форм */
+#question-counter-first,
+#question-counter-second {
     text-align: center;
     font-size: 18px;
     margin-bottom: 20px;
     color: white;
 }
 
-/* Форма */
+/* Стили формы для обеих форм */
 .audit-form {
     text-align: center;
 }
@@ -250,9 +251,11 @@ header {
     font-size: 16px;
 }
 
-/* Кнопки "Далее" и "Назад" */
-button#prev-btn,
-button#next-btn {
+/* Кнопки для обеих форм */
+button#prev-btn-first,
+button#next-btn-first,
+button#prev-btn-second,
+button#next-btn-second {
     background-color: rgb(222, 148, 64);
     color: white;
     padding: 15px 60px;
@@ -266,33 +269,28 @@ button#next-btn {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
 
-/* Стиль при наведении для обеих кнопок */
-button#prev-btn:hover,
-button#next-btn:hover { 
+button#prev-btn-first:hover,
+button#next-btn-first:hover,
+button#prev-btn-second:hover,
+button#next-btn-second:hover {
     background-color: rgb(205, 115, 14);
 }
 
-/* Размещение кнопок рядом друг с другом */
-.form-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 40px; /* Расстояние между кнопками */
-    margin-top: 20px;
-}
-
-/* Сообщение после отправки */
-#success-message h2 {
+/* Сообщения после отправки */
+#success-message-first h2,
+#success-message-second h2 {
     font-size: 28px;
     color: #4caf50;
     margin-bottom: 20px;
 }
 
-#success-message p {
+#success-message-first p,
+#success-message-second p {
     font-size: 18px;
-    color: #333;
-    line-height: 1.5;
     color: white;
+    line-height: 1.5;
 }
+
 
 /* ПРОДУКЦИЯ */
 
@@ -672,14 +670,14 @@ ul li {
 /* ПАРТНЕРАМ */
 
 #id-distributor {
-    display: flex; /* Делаем контейнер flex-контейнером */
-    flex-direction: column; /* Размещаем элементы вертикально */
-    gap: 60px; /* Устанавливаем расстояние между элементами */
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
     background-color: #bcbcbc;
     background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.8)), url('icons/pngwing.com1.png');
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat; 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     padding: 80px;
     border-radius: 30px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
@@ -791,61 +789,9 @@ ul li {
     transform: rotate(90deg); /* Поворачиваем стрелку */
 }
 
-/* Стили для формы заявки */
-.contact-form {
-    width: 100%;
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 40px;
-    background-color: rgba(39, 39, 39, 0.5);
-    border: 2px solid #ccc;
-    border-radius: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-}
-
-.contact-form h2 {
-    text-align: center;
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 30px;
-    color: white;
-}
-
-.form-group {
-    margin-bottom: 15px;
-}
-
-.form-group input[type="text"],
-.form-group input[type="tel"] {
-    width: 100%;
-    padding: 15px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    font-size: 16px;
-    box-sizing: border-box;
-}
-
-/* Контейнер для центрирования кнопки */
-.button-container {
-    display: flex;
-    justify-content: center; /* Центрирование кнопки по горизонтали */
-    margin-top: 20px;
-}
-
-button[type="submit"] {
-    padding: 15px 30px;
-    background-color: rgb(222, 148, 64);
-    border: 2px solid #ccc;
-    color: white;
-    border-radius: 30px;
-    font-size: 20px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-button[type="submit"]:hover {
-    background-color: rgb(205, 115, 14);
+/* Унифицированный стиль текста */
+.audit-form p {
+    color: white; /* Убедитесь, что текст белого цвета */
 }
 
 /* КОНТАКТЫ */

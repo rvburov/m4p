@@ -101,29 +101,31 @@
                     </div>
                 </div>
             </div>
-            <div id="audit-container" class="section-offset">
+            <!-- Первая форма -->
+            <div id="first-form-container" class="section-offset">
                 <div class="progress-bar">
-                    <div class="progress" id="progress"></div>
+                    <div class="progress" id="progress-first"></div>
                 </div>
-                <p id="question-counter">Вопрос 1 / 5</p>
-                <div class="audit-form" id="audit-form">
+                <p id="question-counter-first">Вопрос 1 / 5</p>
+                <div class="audit-form" id="audit-form-first">
                     <h2>Сделаем индивидуальное предложение</h2>
                     <p>Заполните короткую форму и получите предложение о стоимости уже сегодня</p>
-                    <form id="auditForm">
+                    <form id="firstAuditForm">
                         <div class="form-group">
-                            <label for="input-field" id="form-label">Продукция:</label>
-                            <input type="text" id="input-field" placeholder="Выберите товар" required>
+                            <label for="input-field-first" id="form-label-first">Товар:</label>
+                            <input type="text" id="input-field-first" placeholder="Выберите товар" required>
                         </div>
-                        <p id="error-message" style="display: none; color: red; margin-top: 10px;"></p>
-                        <button type="button" id="prev-btn" style="display: none;">Назад</button>
-                        <button type="button" id="next-btn">Далее</button>
+                        <p id="error-message-first" style="display: none; color: red; margin-top: 10px;"></p>
+                        <button type="button" id="prev-btn-first" style="display: none;">Назад</button>
+                        <button type="button" id="next-btn-first">Далее</button>
                     </form>
                 </div>
-                <div id="success-message" style="display: none; text-align: center;">
+                <div id="success-message-first" style="display: none; text-align: center;">
                     <h2>ЗАЯВКА ОТПРАВЛЕНА</h2>
                     <p>Спасибо за заполнение формы. Мы свяжемся с вами в ближайшее время.</p>
                 </div>
             </div>
+            
         </div>
     </header>
     <main>
@@ -581,20 +583,29 @@
                     </div>
                 </div>
             </div>
-            <!-- Форма заявки на сотрудничество -->
-            <div class="contact-form">
-                <h2>ОСТАВТЕ ЗАЯВКУ ПО ВОПРОСАМ СОТРУДНИЧЕСТВА</h2>
-                <form action="submit_form.php" method="post">
-                    <div class="form-group">
-                        <input type="text" id="name" name="name" placeholder="Введите ваше имя" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="tel" id="phone" name="phone" placeholder="Введите ваш телефон" required>
-                    </div>
-                    <div class="button-container">
-                        <button type="submit">ОТПРАВИТЬ ЗАЯВКУ</button>
-                    </div>
-                </form>
+            <!-- Вторая форма -->
+            <div id="second-form-container" class="section-offset">
+                <div class="progress-bar">
+                    <div class="progress" id="progress-second"></div>
+                </div>
+                <p id="question-counter-second">Вопрос 1 / 5</p>
+                <div class="audit-form" id="audit-form-second">
+                    <h2>Оставьте заявку по вопросам сотрудничества</h2>
+                    <p>Заполните короткую форму и отправьте заявку</p>
+                    <form id="secondAuditForm">
+                        <div class="form-group">
+                            <label for="input-field-second" id="form-label-second">Наименование компании:</label>
+                            <input type="text" id="input-field-second" placeholder="Введите наименование компании" required>
+                        </div>
+                        <p id="error-message-second" style="display: none; color: red; margin-top: 10px;"></p>
+                        <button type="button" id="prev-btn-second" style="display: none;">Назад</button>
+                        <button type="button" id="next-btn-second">Далее</button>
+                    </form>
+                </div>
+                <div id="success-message-second" style="display: none; text-align: center;">
+                    <h2>ЗАЯВКА ОТПРАВЛЕНА</h2>
+                    <p>Спасибо за заполнение формы. Мы свяжемся с вами в ближайшее время.</p>
+                </div>
             </div>
         </div>
     </main>
