@@ -1,3 +1,4 @@
+
 let currentIndex = 0;
     const items = document.querySelectorAll('.catalog-container');
     const totalItems = items.length;
@@ -8,7 +9,7 @@ let currentIndex = 0;
         items[currentIndex].classList.add('active');
     }
     setInterval(showNextItem, 3000); // Интервал переключения (3000 мс = 3 секунды)
-
+ 
 
 //НАВИГАТОР ПРОГРУТКА СТРАНИЦЫ
 

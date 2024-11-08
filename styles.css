@@ -33,7 +33,7 @@ header, main, footer {
 header {
     padding-bottom: 30px;
     padding-top: 40px;
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.4)), url('image/factory.jpg');
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.4)), url('image/background-image-factory.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -89,6 +89,20 @@ header {
 .navigation-phone{
     color: black;
     font-size: 18px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.navigation-phone:hover {
+    color: rgb(218, 124, 16);
+}
+
+/* Навигатор адаптив*/
+
+.container-navigation-adaptiv-open{
+    display: none;
+}
+.container-navigation-adaptiv-close{
+    display: none;
 }
 
 /* Главная страница */
@@ -96,9 +110,10 @@ header {
 .homepage-name{
     color: black;
     font-size: 32px;
-    margin: 70px 0;
+    margin: 70px 80px;
     text-align: center;
     font-weight: 900;
+    line-height: 1.5;
 }
 .homepage-container{
     display: flex;
@@ -154,15 +169,14 @@ header {
     border: 3px solid #ccc;
 }
 .catalog-container h1 {
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: 30px;
     font-weight: 900;
     margin-bottom: 20px;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Черный контур вокруг текста */
 
 }
 .catalog-container button{
-    margin: 20px;
+    margin: 15px;
     background-color: rgb(222, 148, 64);
     border: 2px solid #ccc;
     border-radius: 30px;
@@ -316,6 +330,12 @@ main{
     text-align: center;
     margin-bottom: 40px;
 }
+.name-catalog-product{
+    font-size: 28px;
+    font-weight: bolder;
+    text-align: center;
+    margin-bottom: 40px;
+}
 .item-product{
     display: flex;
     justify-content: center;
@@ -454,28 +474,28 @@ ul li {
 
 .about-us-holding-company-block-1 {
     grid-area: block-1;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('image/gubilab-laboratoria.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('image/laboratoria/1.jpg');
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
     border: 3px solid #ccc;
 }
 
 .about-us-holding-company-block-2 {           
     grid-area: block-2;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('image/tehnoma-eco.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('image/tehnoma-eco/tehnoma-eco.jpg');
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
     border: 3px solid #ccc;
 }
 
 .about-us-holding-company-block-3 {
     grid-area: block-3;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('image/A4P-production.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('image/production/1.jpg');
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
     border: 3px solid #ccc;
 }
 
 .about-us-holding-company-block-4 {           
     grid-area: block-4;
-    background-image: linear-gradient(rgba(189, 88, 24, 0.8), rgba(189, 88, 24, 0.8)), url('image/factory.jpg');
+    background-image: linear-gradient(rgba(189, 88, 24, 0.8), rgba(189, 88, 24, 0.8)), url('image/background-image-factory.jpg');
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
     border: 3px solid #ccc;
 }
@@ -598,6 +618,7 @@ ul li {
 .about-us-production-block-5 img {
     width: 100%; /* Изображение занимает всю ширину блока */
     height: 100%; /* Изображение занимает всю высоту блока */
+    max-height: 450px; 
     object-fit: cover; /* Подгоняем изображение по размеру, сохраняя пропорции */
     border-radius: 20px; /* Применяем закругленные углы к изображению */
 }
@@ -861,3 +882,58 @@ ul li {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
 
+/* Адаптивная версия для планшетов */
+@media (max-width: 1024px) {
+    
+    header {
+        height: 1650px;
+    }
+    .homepage-name{
+        font-size: 28px;
+    }
+    .homepage-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        gap: 0;
+    }
+    .catalog-container img{
+        width: 600px;
+    }
+}
+@media (max-width: 850px) {
+    header{
+        padding: 0;
+    }
+    .container-navigation {
+        display: none;
+    }
+    .container-navigation-adaptiv-open{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #2a6ab4;
+        margin: 0;
+    }
+
+    .navigation-logo-m4p-adaptiv-open{
+        width: 150px;
+    }
+    .navigation-phone-adaptiv-open{
+        color: black;
+        font-size: 38px;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    .navigation-open-menu-adaptiv-open{
+        width: 60px;
+    }
+}
+@media (max-width: 420px) {
+    
+}
+@media (max-width: 380px) {
+    
+}
