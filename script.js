@@ -15,12 +15,15 @@ let currentIndex = 0;
 
 window.addEventListener("scroll", function() {
     var navigation = document.querySelector(".container-navigation");
+    var adaptivNavigation = document.querySelector(".container-navigation-adaptiv-open");
     
     // Если прокрутка больше 50px, добавляем класс 'scrolled'
-    if (window.scrollY > 50) {
+    if (window.scrollY > 10) {
         navigation.classList.add("scrolled");
+        adaptivNavigation.classList.add("scrolled");
     } else {
         navigation.classList.remove("scrolled");
+        adaptivNavigation.classList.remove("scrolled");
     }
 });
 
@@ -266,4 +269,24 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     updateFormSecond();
+});
+
+// ОТКРЫТИЕ И ЗАКРЫТИЕ МЕНЮ
+
+// Находим элементы открытого и закрытого меню
+const openMenuButton = document.querySelector('.navigation-open-menu-adaptiv-open');
+const closeMenuButton = document.querySelector('.navigation-close-menu-adaptiv-close');
+const adaptivOpenMenu = document.querySelector('.container-navigation-adaptiv-open');
+const adaptivCloseMenu = document.querySelector('.container-navigation-adaptiv-close');
+
+// Функция открытия меню
+openMenuButton.addEventListener('click', () => {
+    adaptivOpenMenu.style.display = 'none'; // Скрыть значок открытия меню
+    adaptivCloseMenu.style.display = 'flex'; // Показать закрытое меню
+});
+
+// Функция закрытия меню
+closeMenuButton.addEventListener('click', () => {
+    adaptivOpenMenu.style.display = 'flex'; // Показать значок открытия меню
+    adaptivCloseMenu.style.display = 'none'; // Скрыть закрытое меню
 });

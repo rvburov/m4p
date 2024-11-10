@@ -51,10 +51,9 @@ header {
     padding: 10px;
     position: fixed;
     top: 0;
-    left: 50%; /* Сдвиг влево на 50% ширины страницы */
-    transform: translateX(-50%); /* Центрирование */
-    max-width: 1282px; /* Фиксированная максимальная ширина, чтобы соответствовать хедеру */
-    width: 100%; /* Занимает всю ширину до заданного максимума */
+    right: 0;
+    left: 0;
+    margin: 0 auto;
     z-index: 1000; /* Меню будет выше других элементов на странице */
     transition: background-color 0.3s ease-in-out; /* Плавный переход при изменении фона */
     background-color: transparent; /* Изначально прозрачный */
@@ -885,51 +884,93 @@ ul li {
 /* Адаптивная версия для планшетов */
 @media (max-width: 1024px) {
     
-    header {
-        height: 1650px;
-    }
-    .homepage-name{
-        font-size: 28px;
-    }
-    .homepage-container{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: 0;
-        gap: 0;
-    }
-    .catalog-container img{
-        width: 600px;
-    }
 }
 @media (max-width: 850px) {
-    header{
-        padding: 0;
-    }
-    .container-navigation {
+    .container-navigation{
         display: none;
     }
-    .container-navigation-adaptiv-open{
+    .container-navigation-adaptiv-open {
+        display: flex;
+        padding: 10px;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1000;
+        background-color: rgba(255, 255, 255, 0.9); /* Полупрозрачный фон */
+        transition: background-color 0.3s ease-in-out;
+        max-width: 100%;
+        background-color: transparent; /* Изначально прозрачный */
+    }
+    .item-navigation-adaptiv-open{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background-color: #2a6ab4;
-        margin: 0;
+        width: 100%;
     }
 
-    .navigation-logo-m4p-adaptiv-open{
-        width: 150px;
+    .container-navigation-adaptiv-open.scrolled {
+        background-color: rgba(221, 221, 221, 0.9); /* Цвет фона при прокрутке */
+        border-radius: 0 0 20px 20px;
     }
-    .navigation-phone-adaptiv-open{
+    
+    .container-navigation-adaptiv-close {
+        display: none;
+        flex-direction: column;
+        padding: 10px;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1000;
+        background-color: rgba(221, 221, 221, 0.9); /* Цвет фона при прокрутке */
+        max-width: 100%;
+        border-radius: 0 0 20px 20px;
+    }
+
+    .item-navigation-adaptiv-close-menu{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+    .item-navigation-adaptiv-close {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+    
+    .navigation-logo-m4p-adaptiv-open,
+    .navigation-logo-m4p-adaptiv-close{
+        width: 180px;
+    }
+    .navigation-phone-adaptiv-open,
+    .navigation-phone-adaptiv-close{
         color: black;
         font-size: 38px;
         text-decoration: none;
         cursor: pointer;
     }
-    .navigation-open-menu-adaptiv-open{
+    .navigation-open-menu-adaptiv-open,
+    .navigation-close-menu-adaptiv-close{
         width: 60px;
     }
+    .navigation-phone-logo-adaptiv-close{
+        height: 50px;
+        margin: 20px;
+    }
+    .navigation-adaptiv-close{
+        text-decoration: none;
+        color: black;
+        font-size: 32px;
+        cursor: pointer;
+        margin: 30px 10px;
+    }
+    .navigation-adaptiv-close:hover {
+        color: rgb(218, 124, 16);
+    }
+    
 }
 @media (max-width: 420px) {
     
