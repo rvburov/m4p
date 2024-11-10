@@ -1,3 +1,4 @@
+/* ОБЩИЕ НАСТРОЙКИ */
 @font-face{
     font-family: 'FuturaPT';
     src: url('./fonts/FuturaPT-Light.woff2') format ('woff2');
@@ -5,7 +6,6 @@
     line-height: 1.5;
     font-display: swap;
 }
-
 html {
     margin: 0;
     padding: 0;
@@ -13,8 +13,6 @@ html {
     color: black;
     scroll-behavior: smooth;
 }
-
-/* Главный контейнер страницы */
 body {
     display: flex;
     flex-direction: column;
@@ -24,79 +22,81 @@ body {
     margin: 0 auto;
     gap: 20px;
 }
-
 header, main, footer {
     width: 100%; /* Занимает всю ширину контейнера */
     max-width: 1300px; /* Фиксированная максимальная ширина для хедера и других блоков */
 }
 
+
+/* БЛОК ГЛАВНОЙ СТРАНИЦЫ */
+
+
 header {
-    padding-bottom: 30px;
-    padding-top: 40px;
+    padding: 40px 0;
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.4)), url('image/background-image-factory.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 1250px;
     border-radius: 0 0 30px 30px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
-
-/* Навигатор */
+/* Навигация */
 .container-navigation {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 120px;
     padding: 10px;
     position: fixed;
+    max-width: 1280px;
     top: 0;
     right: 0;
     left: 0;
     margin: 0 auto;
-    z-index: 1000; /* Меню будет выше других элементов на странице */
+    z-index: 1000; 
     transition: background-color 0.3s ease-in-out; /* Плавный переход при изменении фона */
     background-color: transparent; /* Изначально прозрачный */
 }
-
+/* Изменение цвет фона в навигации при прокрутке */
 .container-navigation.scrolled {
-    background-color: rgba(221, 221, 221, 0.9); /* Цвет фона при прокрутке */
-    max-width: 1282px;
-    border-radius: 0 0 10px 10px;
+    background-color: rgba(221, 221, 221, 0.9); 
+    border-radius: 0 0 20px 20px;
 }
+/* Элементы в навигации */
 .item-navigation{
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 30px;
 }
+/* Логотип компании в навигации */
 .navigation-logo-m4p{
     width: 120px;
 }
+/* Пункты в навигации */
 .navigation{
     text-decoration: none;
     color: black;
-    font-size: 20px;
+    font-size: 18px;
     cursor: pointer;
 }
 .navigation:hover {
     color: rgb(218, 124, 16);
 }
-.navigation-phone-logo{
+/* Логотипы месседжеров в навигации */
+.navigation-logo{
     width: 30px;
 }
+/* Номер телефона в навигации */
 .navigation-phone{
     color: black;
-    font-size: 18px;
+    font-size: 22px;
     text-decoration: none;
     cursor: pointer;
 }
 .navigation-phone:hover {
     color: rgb(218, 124, 16);
 }
-
-/* Навигатор адаптив*/
-
+/* Навигация адаптива*/
 .container-navigation-adaptiv-open{
     display: none;
 }
@@ -104,30 +104,38 @@ header {
     display: none;
 }
 
-/* Главная страница */
-
+/* Загловление главной страницы */
 .homepage-name{
     color: black;
     font-size: 32px;
-    margin: 70px 80px;
+    margin: 70px 20px;
     text-align: center;
-    font-weight: 900;
+    font-weight: bold;
     line-height: 1.5;
 }
+/* Элементы преимуществ и каталога главной странице */
 .homepage-container{
     display: flex;
-    justify-content: space-between;
-    margin: 80px;
-    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 20px;
+}
+/* Элементы преимуществ на главной странице */
+.homepage-item{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 .advantages-container{
     display: flex;
     align-items: center;
     background-color: rgba(39, 39, 39, 0.8);
     border-radius: 20px;
-    margin-bottom: 20px;
-    width: 600px;
+    max-width: 630px;
+    width: 100%;
 }
+/* Логотип преимуществ на главной странице */
 .item-advantages img{
     width: 60px;
     background-color: rgb(243, 227, 4);
@@ -135,12 +143,14 @@ header {
     margin: 10px;
     border-radius: 20px;
 }
+/* Заголовок преимуществ на главной странице */
 .item-advantages h1{
     font-size: 24px;
     color: white;
     margin: 5px 0;
     font-weight: 700;
 }
+/* Текст преимуществ на главной странице */
 .item-advantages p {
     color: white;
     font-size: 14px;
@@ -148,6 +158,7 @@ header {
     font-weight: 200; 
     line-height: 1.5;
 }
+/* Элементы каталога на главной странице */
 .catalog-container {
     display: none; /* Скрываем все элементы по умолчанию */
     flex-direction: column;
@@ -155,10 +166,10 @@ header {
     align-items: center;
     border-radius: 20px;
 }
-
 .catalog-container.active {
     display: flex; /* Отображаем только активный элемент */
 }
+/* Изображение каталога на главной странице */
 .catalog-container img{
     width: 500px;
     height: 350px;
@@ -167,13 +178,14 @@ header {
     box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.2); 
     border: 3px solid #ccc;
 }
+/* Заголовок каталога на главной странице */
 .catalog-container h1 {
     color: rgb(0, 0, 0);
     font-size: 30px;
     font-weight: 900;
-    margin-bottom: 20px;
-
+    margin-bottom: 15px;
 }
+/* Кнопка для прехода в каталог на главной странице */
 .catalog-container button{
     margin: 15px;
     background-color: rgb(222, 148, 64);
@@ -189,21 +201,18 @@ header {
 .catalog-container button:hover {
     background-color: rgb(205, 115, 14);
 }
-
-
-/* ФОРМА ДЛЯ ЗАЯВКИ */
-
+/* Форма заявки */
 /* Универсальный стиль для обоих форм */
 .section-offset {
     background-color: rgba(39, 39, 39, 0.8);
-    padding: 40px 60px 40px 40px;
-    max-width: 1050px;
-    width: 100%;
-    margin: 20px auto; /* Отступ между формами */
+    padding: 2rem;
+    max-width: 1160px; /* Максимальная ширина */
+    width: calc(100% - 40px); /* Занимает 100% ширины экрана */
+    margin: auto; /* Центрирование */
     border-radius: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    box-sizing: border-box;
 }
-
 /* Прогресс-бар для обеих форм */
 .progress-bar {
     background-color: #f1f1f1;
@@ -212,13 +221,12 @@ header {
     height: 10px;
     margin-bottom: 20px;
 }
-
+/* Индикатор для обеих форм */
 .progress {
     height: 100%;
     width: 20%;
     background-color: #4caf50;
 }
-
 /* Вопросы для обеих форм */
 #question-counter-first,
 #question-counter-second {
@@ -227,43 +235,39 @@ header {
     margin-bottom: 20px;
     color: white;
 }
-
 /* Стили формы для обеих форм */
 .audit-form {
     text-align: center;
 }
-
+/* Заготовок для обеих форм */
 .audit-form h2 {
     font-size: 24px;
     font-weight: 900;
     margin-bottom: 15px;
     color: white;
 }
-
+/* Текст для обеих форм */
 .audit-form p {
     margin-bottom: 20px;
     color: white;
 }
-
 .form-group {
     margin-bottom: 20px;
 }
-
 .form-group label {
     display: block;
     margin-bottom: 8px;
     font-size: 16px;
     color: white;
 }
-
 .form-group input[type="text"] {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
+    box-sizing: border-box;
 }
-
 /* Кнопки для обеих форм */
 button#prev-btn-first,
 button#next-btn-first,
@@ -281,14 +285,12 @@ button#next-btn-second {
     transition: background-color 0.3s ease;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
-
 button#prev-btn-first:hover,
 button#next-btn-first:hover,
 button#prev-btn-second:hover,
 button#next-btn-second:hover {
     background-color: rgb(205, 115, 14);
 }
-
 /* Сообщения после отправки */
 #success-message-first h2,
 #success-message-second h2 {
@@ -296,7 +298,6 @@ button#next-btn-second:hover {
     color: #4caf50;
     margin-bottom: 20px;
 }
-
 #success-message-first p,
 #success-message-second p {
     font-size: 18px;
@@ -305,14 +306,14 @@ button#next-btn-second:hover {
 }
 
 
-/* ПРОДУКЦИЯ */
+/* БЛОК ПРОДУКЦИЯ */
+
 
 main{
-    display: flex; /* Делаем контейнер flex-контейнером */
-    flex-direction: column; /* Размещаем элементы вертикально */
-    gap: 20px; /* Устанавливаем расстояние между элементами */
+    display: flex; 
+    flex-direction: column; 
+    gap: 20px; 
 }
-
 .products{
     background-color: #dcd8c8;
     border-radius: 30px;
@@ -323,51 +324,73 @@ main{
     background-position: center; 
     background-repeat: no-repeat; 
 }
+/* Заголовок блока продукции */
 .name-product{
     font-size: 28px;
     font-weight: bolder;
     text-align: center;
-    margin-bottom: 40px;
 }
+/* Заголовок продуктов блока продукции */
 .name-catalog-product{
-    font-size: 28px;
+    font-size: 18px;
     font-weight: bolder;
     text-align: center;
-    margin-bottom: 40px;
+    margin: 40px 0;
 }
+/* Элемент продукта блока продукции */
 .item-product{
     display: flex;
     justify-content: center;
     gap: 20px;
 }
-.item-product div{
+.item-product-menu{
     display: flex;
     flex-direction: column;
 }
-.item-product img{
+/* Изображение продукта блока продукции */
+.item-product-menu img{
     width: 300px;
     height: 300px;
     border-radius: 20px;
     border: 2px solid #ccc;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
-.item-product p{
+/* Название продукта блока продукции */
+.item-product-menu h1{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #656565;
+    font-weight: bold;
+}
+/* Стоимость продукта блока продукции */
+.item-product-menu p{
     text-align: center;
     margin: 20px;
     font-size: 20px;
     color: #656565;
     font-weight: bold;
 }
-.item-product h1{
-    text-align: center;
-    margin: 20px;
+/* Кнопка продукта блока продукции */
+.item-product button{
+    background-color: rgb(222, 148, 64);
+    border: 2px solid #ccc;
+    border-radius: 30px;
+    padding: 15px 40px;
     font-size: 20px;
-    color: #656565;
     font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    color: white;
+    cursor: pointer;
 }
+.item-product button:hover {
+    background-color: rgb(205, 115, 14);
+}
+/* Элемент параметров продукта блока продукции */
 .item-product-info{
     max-width: 650px;
 }
+/* Загаловок параметров продукта блока продукции */
 .item-product-info h1{
     color: rgb(43, 113, 62);
     font-weight: 800;
@@ -386,6 +409,7 @@ main{
     bottom: 0;
     left: 0;
 }
+/* Текст параметров продукта блока продукции */
 ul {
     list-style-type: disc; /* Устанавливаем стандартные маркеры в виде точек */
     margin-left: 20px; /* Добавляем отступ для лучшей видимости */
@@ -396,6 +420,7 @@ ul li {
     color: #656565;
     line-height: 1.5;
 }
+/* Дополнительные изображения продукта блока продукции */
 .item-product-exemple{
     display: flex;
     flex-direction: column;
@@ -404,21 +429,11 @@ ul li {
     width: 200px;
     height: 200px;
     margin: 10px;
-}
-.item-product button{
-    background-color: rgb(222, 148, 64);
+    border-radius: 20px;
     border: 2px solid #ccc;
-    border-radius: 30px;
-    padding: 15px 40px;
-    font-size: 20px;
-    font-weight: bold;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-    color: white;
-    cursor: pointer;
 }
-.item-product button:hover {
-    background-color: rgb(205, 115, 14);
-}
+
 
 /* О КОМПАНИИ */
 
@@ -687,7 +702,7 @@ ul li {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Тень для выделения изображения */
 }
 
-/* ПАРТНЕРАМ */
+/* СОТРУДНИЧЕСТВО */
 
 #id-distributor {
     display: flex;
@@ -882,13 +897,30 @@ ul li {
 }
 
 /* Адаптивная версия для планшетов */
-@media (max-width: 1024px) {
-    
+@media (max-width: 1100px) {
+    .item-navigation{
+        gap: 15px;
+    }
+    .navigation{
+        font-size: 14px;
+    }
+    .navigation-logo{
+        width: 20px;
+    }
+    .navigation-phone{
+        font-size: 18px;
+    }
 }
 @media (max-width: 850px) {
+    /* БЛОК ГЛАВНОЙ СТРАНИЦЫ */
+    .header{
+        padding: 70px;
+    }
+    /* Навигация */
     .container-navigation{
         display: none;
     }
+    /* Навигация адаптива */
     .container-navigation-adaptiv-open {
         display: flex;
         padding: 10px;
@@ -902,18 +934,18 @@ ul li {
         max-width: 100%;
         background-color: transparent; /* Изначально прозрачный */
     }
+    /* Элементы навигации адаптива */
     .item-navigation-adaptiv-open{
         display: flex;
         justify-content: space-between;
         align-items: center;
         width: 100%;
     }
-
     .container-navigation-adaptiv-open.scrolled {
         background-color: rgba(221, 221, 221, 0.9); /* Цвет фона при прокрутке */
         border-radius: 0 0 20px 20px;
     }
-    
+    /* Навигация адаптива расширенная */
     .container-navigation-adaptiv-close {
         display: none;
         flex-direction: column;
@@ -923,54 +955,89 @@ ul li {
         right: 0;
         left: 0;
         z-index: 1000;
-        background-color: rgba(221, 221, 221, 0.9); /* Цвет фона при прокрутке */
+        background-color: rgba(221, 221, 221, 0.9);
         max-width: 100%;
         border-radius: 0 0 20px 20px;
     }
-
+    /* Элементы меню навигации адаптива расширенная */
     .item-navigation-adaptiv-close-menu{
         display: flex;
         justify-content: space-between;
         align-items: center;
         width: 100%;
     }
+    /* Элементы текста меню навигации адаптива расширенная */
     .item-navigation-adaptiv-close {
         display: flex;
         flex-direction: column;
         align-items: center;
         margin-top: 20px;
     }
-    
+    /* Элементы телефона и месседжеров навигации адаптива расширенная */
+    .item-navigation-adaptiv-close div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    /* Логотип компании навигации адаптива */
     .navigation-logo-m4p-adaptiv-open,
     .navigation-logo-m4p-adaptiv-close{
         width: 180px;
     }
+    /* Номер телефона навигации адаптива */
     .navigation-phone-adaptiv-open,
     .navigation-phone-adaptiv-close{
         color: black;
-        font-size: 38px;
+        font-size: 28px;
         text-decoration: none;
         cursor: pointer;
+        font-weight: bold;
     }
+    /* Логотип бургерного меню навигации адаптива */
     .navigation-open-menu-adaptiv-open,
     .navigation-close-menu-adaptiv-close{
         width: 60px;
     }
+    /* Логотип телефона навигации адаптива */
     .navigation-phone-logo-adaptiv-close{
         height: 50px;
         margin: 20px;
     }
+    /* Текст навигации адаптива */
     .navigation-adaptiv-close{
         text-decoration: none;
         color: black;
-        font-size: 32px;
+        font-size: 22px;
+        font-weight: bold;
         cursor: pointer;
         margin: 30px 10px;
     }
     .navigation-adaptiv-close:hover {
         color: rgb(218, 124, 16);
     }
-    
+    /* Загловление главной страницы */
+    .homepage-name{
+        font-size: 22px;
+        margin: 80px 20px 10px 20px;
+    }
+    .homepage-container{
+        display: flex;
+        flex-direction: column;
+    }
+    /* БЛОК ПРОДУКЦИЯ */
+    .item-product{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+    .item-product-exemple{
+        display: flex;
+        flex-direction: row; /* Выравнивание в ряд */
+        gap: 10px; /* Расстояние между изображениями */
+        justify-content: center; /* Центрирование содержимого */
+        align-items: center; /* Вертикальное выравнивание */
+    }
 }
 @media (max-width: 420px) {
     
