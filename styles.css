@@ -199,6 +199,7 @@ header {
     box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.2); 
     color: white;
     cursor: pointer;
+    font-family: 'FuturaPT';
 }
 .catalog-container button:hover {
     background-color: rgb(205, 115, 14);
@@ -252,6 +253,7 @@ header {
 .audit-form p {
     margin-bottom: 20px;
     color: white;
+    line-height: 1.5;
 }
 .form-group {
     margin-bottom: 20px;
@@ -286,6 +288,7 @@ button#next-btn-second {
     text-transform: uppercase;
     transition: background-color 0.3s ease;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    font-family: 'FuturaPT';
 }
 button#prev-btn-first:hover,
 button#next-btn-first:hover,
@@ -1051,7 +1054,7 @@ ul li {
     }
     /* Заголовок каталога на главной странице */
     .catalog-container h1 {
-        font-size: 18px;
+        font-size: 22px;
     }
     /* Изображение каталога на главной странице */
     .catalog-container img{
@@ -1107,12 +1110,12 @@ ul li {
     /* Текст навигации адаптива */
     .navigation-adaptiv-close{
         font-size: 16px;
-        margin: 20px;
+        margin: 15px;
     }
     /* Загловление главной страницы */
     .homepage-name{
         font-size: 16px;
-        margin: 40px 10px 20px 10px;
+        margin: 40px 10px 10px 10px;
     }
     .advantages-container{
         padding: 8px;
@@ -1122,28 +1125,96 @@ ul li {
     .homepage-container{
         margin: 10px;
     }
-    /* Изображение каталога на главной странице */
-    .catalog-container img{
-        width: 320px;
-        height: 220px;
-    }
     /* Заголовок преимуществ на главной странице */
     .item-advantages h1{
         font-size: 18px;
         font-weight: 700;
     }
-    /* Заголовок каталога на главной странице */
-    .catalog-container h1 {
-        font-size: 16px;
-    }
     /* Текст преимуществ на главной странице */
     .item-advantages p {
         font-size: 12px;
     }
+    /* Заголовок каталога на главной странице */
+    .catalog-container h1 {
+        font-size: 16px;
+    }
+    /* Изображение каталога на главной странице */
+    .catalog-container img{
+        width: 320px;
+        height: 220px;
+    }
+    /* Кнопка для прехода в каталог на главной странице */
+    .catalog-container button{
+        margin: 15px;
+        border-radius: 30px;
+        padding: 15px 30px;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    /* Форма заявки */
+    /* Универсальный стиль для обоих форм */
+    .section-offset {
+        padding: 1.5rem;
+        width: calc(100% - 20px); /* Занимает 100% ширины экрана */
+    }
+    /* Прогресс-бар для обеих форм */
+    .progress-bar {
+        margin-bottom: 10px;
+    }
+    /* Вопросы для обеих форм */
+    #question-counter-first,
+    #question-counter-second {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    /* Заготовок для обеих форм */
+    .audit-form h2 {
+        font-size: 20px;
+        font-weight: 900;
+        margin-bottom: 15px;
+    }
+    /* Текст для обеих форм */
+    .audit-form p {
+        margin-bottom: 16px;
+    }
+    .form-group {
+        margin-bottom: 20px;
+    }
+    .form-group label {
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+    /* Кнопки для обеих форм */
+    button#prev-btn-first,
+    button#next-btn-first,
+    button#prev-btn-second,
+    button#next-btn-second {
+        padding: 15px 30px;
+        border: 2px solid #ccc;
+        border-radius: 30px;
+        font-size: 16px;
+    }
+    button#prev-btn-first:hover,
+    button#next-btn-first:hover,
+    button#prev-btn-second:hover,
+    button#next-btn-second:hover {
+        background-color: rgb(205, 115, 14);
+    }
+    /* Сообщения после отправки */
+    #success-message-first h2,
+    #success-message-second h2 {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+    #success-message-first p,
+    #success-message-second p {
+        font-size: 18px;
+        line-height: 1.5;
+    }
     
 }
 @media (max-width: 375px) {
-           /* Загловление главной страницы */
+    /* Загловление главной страницы */
     .homepage-name{
         font-size: 14px;
         margin: 40px 10px 10px 10px;
