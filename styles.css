@@ -45,7 +45,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
+    padding: 10px 20px;
     position: fixed;
     max-width: 1280px;
     top: 0;
@@ -66,7 +66,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 25px;
 }
 /* Логотип компании в навигации */
 .navigation-logo-m4p{
@@ -134,13 +134,15 @@ header {
     border-radius: 20px;
     max-width: 630px;
     width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    gap: 20px;
 }
 /* Логотип преимуществ на главной странице */
 .item-advantages img{
     width: 60px;
     background-color: rgb(243, 227, 4);
     padding: 10px;
-    margin: 10px;
     border-radius: 20px;
 }
 /* Заголовок преимуществ на главной странице */
@@ -910,6 +912,10 @@ ul li {
     .navigation-phone{
         font-size: 18px;
     }
+    .homepage-container{
+        display: flex;
+        flex-direction: column;
+    }
 }
 @media (max-width: 850px) {
     /* БЛОК ГЛАВНОЙ СТРАНИЦЫ */
@@ -923,7 +929,7 @@ ul li {
     /* Навигация адаптива */
     .container-navigation-adaptiv-open {
         display: flex;
-        padding: 10px;
+        padding: 10px 30px;
         position: fixed;
         top: 0;
         right: 0;
@@ -949,7 +955,7 @@ ul li {
     .container-navigation-adaptiv-close {
         display: none;
         flex-direction: column;
-        padding: 10px;
+        padding: 10px 30px;
         position: fixed;
         top: 0;
         right: 0;
@@ -982,7 +988,7 @@ ul li {
     /* Логотип компании навигации адаптива */
     .navigation-logo-m4p-adaptiv-open,
     .navigation-logo-m4p-adaptiv-close{
-        width: 180px;
+        width: 140px;
     }
     /* Номер телефона навигации адаптива */
     .navigation-phone-adaptiv-open,
@@ -996,7 +1002,7 @@ ul li {
     /* Логотип бургерного меню навигации адаптива */
     .navigation-open-menu-adaptiv-open,
     .navigation-close-menu-adaptiv-close{
-        width: 60px;
+        width: 40px;
     }
     /* Логотип телефона навигации адаптива */
     .navigation-phone-logo-adaptiv-close{
@@ -1018,18 +1024,46 @@ ul li {
     /* Загловление главной страницы */
     .homepage-name{
         font-size: 22px;
-        margin: 80px 20px 10px 20px;
+        margin: 50px 50px 10px 50px;
     }
     .homepage-container{
         display: flex;
         flex-direction: column;
     }
+    .catalog-container img{
+        max-width: 620px;
+        width: 100%;
+        height: 350px;
+        object-fit: cover
+    }
+    /* Элементы преимуществ на главной странице */
+    .homepage-item{
+        gap: 10px;
+    }
+    /* Логотип преимуществ на главной странице */
+    .item-advantages img{
+        width: 40px;
+    }
+    /* Заголовок преимуществ на главной странице */
+    .item-advantages h1{
+        font-size: 20px;
+        font-weight: 700;
+    }
+    /* Текст преимуществ на главной странице */
+    .item-advantages p {
+        font-size: 14px;
+    }
+    /* Форма заявки */
+    .section-offset {
+        max-width: 620px; 
+    }
+
     /* БЛОК ПРОДУКЦИЯ */
     .item-product{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     .item-product-exemple{
         display: flex;
@@ -1039,9 +1073,49 @@ ul li {
         align-items: center; /* Вертикальное выравнивание */
     }
 }
-@media (max-width: 420px) {
+@media (max-width: 450px) {
+    /* Навигация адаптива расширенная */
+    .container-navigation-adaptiv-open,
+    .container-navigation-adaptiv-close {
+        padding: 10px 20px;
+    }
+    /* Логотип компании навигации адаптива */
+    .navigation-logo-m4p-adaptiv-open,
+    .navigation-logo-m4p-adaptiv-close{
+        width: 100px;
+    }
+    .navigation-open-menu-adaptiv-open,
+    .navigation-close-menu-adaptiv-close{
+        width: 30px;
+    }
+    /* Загловление главной страницы */
+    .homepage-name{
+        font-size: 16px;
+        margin: 40px 10px 20px 10px;
+    }
+    .advantages-container{
+        padding: 8px;
+        gap: 10px;
+    }
+    /* Элементы преимуществ и каталога главной странице */
+    .homepage-container{
+        margin: 10px;
+    }
+    /* Заголовок преимуществ на главной странице */
+    .item-advantages h1{
+        font-size: 18px;
+        font-weight: 700;
+    }
+    /* Текст преимуществ на главной странице */
+    .item-advantages p {
+        font-size: 12px;
+    }
     
 }
-@media (max-width: 380px) {
-    
+@media (max-width: 375px) {
+           /* Загловление главной страницы */
+    .homepage-name{
+        font-size: 14px;
+        margin: 40px 10px 10px 10px;
+    }
 }
