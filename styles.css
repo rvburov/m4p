@@ -441,6 +441,7 @@ ul li {
 
 /* О КОМПАНИИ */
 
+/* Раздел элемонтов холдинга */
 .about-us{
     display: flex; /* Делаем контейнер flex-контейнером */
     flex-direction: column; /* Размещаем элементы вертикально */
@@ -454,14 +455,14 @@ ul li {
     border-radius: 30px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
+/* Заголовок блока о компании */
 .about-us-name{
     font-size: 28px;
     font-weight: 900;
     text-align: center;
     text-shadow: none;
 }
-
-/* Холдинг */
+/* Элементы холдинг */
 .about-us-holding-company-container {
     display: grid;
     grid-template-areas: 
@@ -471,7 +472,6 @@ ul li {
         grid-template-columns: 2fr 2fr 1fr 1fr; /* Увеличение ширины колонок */
     gap: 10px; /* Отступы между блоками */
 }
-
 .about-us-holding-company-block-1,
 .about-us-holding-company-block-2,
 .about-us-holding-company-block-3,
@@ -489,34 +489,30 @@ ul li {
     padding: 20px; 
     gap: 10px;
 }
-
+.about-us-holding-company-block-1,
+.about-us-holding-company-block-1,
+.about-us-holding-company-block-1,
+.about-us-holding-company-block-1 {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    border: 3px solid #ccc;
+}
 .about-us-holding-company-block-1 {
     grid-area: block-1;
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('image/laboratoria/1.jpg');
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-    border: 3px solid #ccc;
 }
-
-.about-us-holding-company-block-2 {           
-    grid-area: block-2;
+.about-us-holding-company-block-2 {    
+    grid-area: block-2;       
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('image/tehnoma-eco/tehnoma-eco.jpg');
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-    border: 3px solid #ccc;
 }
-
 .about-us-holding-company-block-3 {
     grid-area: block-3;
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('image/production/1.jpg');
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-    border: 3px solid #ccc;
 }
-
-.about-us-holding-company-block-4 {           
-    grid-area: block-4;
+.about-us-holding-company-block-4 {  
+    grid-area: block-4;         
     background-image: linear-gradient(rgba(189, 88, 24, 0.8), rgba(189, 88, 24, 0.8)), url('image/background-image-factory.jpg');
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-    border: 3px solid #ccc;
 }
+/* Заголовок элемента холдинга */
 .about-us-holding-company-block-1 h1,
 .about-us-holding-company-block-2 h1,
 .about-us-holding-company-block-3 h1 {
@@ -524,33 +520,27 @@ ul li {
     font-weight: bold;
     text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000; /* Черный контур вокруг текста */
 }
+/* Текст элемента холдинга */
 .about-us-holding-company-block-1 p,
 .about-us-holding-company-block-2 p,
 .about-us-holding-company-block-3 p {
     font-size: 18px;
     font-weight: lighter;
 }
+/* Логотип элемента холдинга */
 .about-us-holding-company-block-4 img{
-    width: 350px;
+    width: 100%;
+    box-sizing: border-box;
 }
-
-/* История и результаты */
-.about-us-history-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    grid-template-rows: auto auto; 
-    gap: 0; 
-    border: none; 
-}
+/* Раздел истории холдинга */
 .about-us-history-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Три равных столбца */
     grid-template-rows: auto auto; /* Два ряда по высоте содержимого */
     gap: 0; /* Убираем зазоры между блоками */
-    margin: 0; /* Убираем внешние отступы, если есть */
-    padding-top: 0; /* Убираем верхний внутренний отступ */
     border: none; /* Убираем любые возможные границы у контейнера */
 }
+/* Текст истории холдинга */
 .about-us-history-block-1 {
     grid-column: span 2; 
     border-bottom: 1px solid #bcbcbc; 
@@ -596,10 +586,7 @@ ul li {
 .about-us-history-block:nth-child(3) {
     border-left: none; /* Убираем границу слева у третьего блока */
 }
-
-/* Производство компании */
-
-/* Стили контейнера */
+/* Контейнера раздела технологий компании */
 .about-us-production-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Две равные колонки */
@@ -607,6 +594,7 @@ ul li {
     gap: 20px; /* Отступы между блоками */
     padding: 20px; /* Внутренний отступ для контейнера */
 }
+/* Заголовок раздела технологий компании */
 .about-us-production h1{
     font-size: 28px;
     font-weight: 900;
@@ -614,8 +602,7 @@ ul li {
     text-shadow: none;
     margin-bottom: 40px;
 }
-
-/* Стили для блоков с изображениями */
+/* Изображения раздела технологий компании */
 .about-us-production-block-1,
 .about-us-production-block-4,
 .about-us-production-block-5 {
@@ -623,14 +610,8 @@ ul li {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-radius: 20px; /* Закругленные углы для родительского блока */
-    border: 3px solid #ccc;
-    padding: 0; /* Убираем внутренние отступы */
-    overflow: hidden; /* Убираем выходы изображения за границы блока */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Тень для родительского блока */
+    
 }
-
-/* Стили для изображений */
 .about-us-production-block-1 img,
 .about-us-production-block-4 img,
 .about-us-production-block-5 img {
@@ -638,10 +619,13 @@ ul li {
     height: 100%; /* Изображение занимает всю высоту блока */
     max-height: 450px; 
     object-fit: cover; /* Подгоняем изображение по размеру, сохраняя пропорции */
-    border-radius: 20px; /* Применяем закругленные углы к изображению */
+    border-radius: 20px; /* Закругленные углы для родительского блока */
+    border: 2px solid #ccc;
+    padding: 0; /* Убираем внутренние отступы */
+    overflow: hidden; /* Убираем выходы изображения за границы блока */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Тень для родительского блока */
 }
-
-/* Стили заголовков */
+/* Заголовков подраздела технологий компании */
 .about-us-production-block-1 h1,
 .about-us-production-block-2 h1,
 .about-us-production-block-3 h1,
@@ -653,8 +637,7 @@ ul li {
     margin: 10px 0; /* Отступы для заголовков */
     color: #333; /* Цвет заголовка */
 }
-
-/* Стили текста описаний */
+/* Текст описаний подраздела технологий компании*/
 .about-us-production-block-2 p,
 .about-us-production-block-3 p,
 .about-us-production-block-6 p {
@@ -663,7 +646,6 @@ ul li {
     color: #555; /* Цвет текста */
     margin: 5px 0; /* Отступы между абзацами */
 }
-
 /* Стили для выделения важных слов */
 .about-us-production-block-2 p strong,
 .about-us-production-block-3 p strong,
@@ -671,7 +653,6 @@ ul li {
     font-weight: bold;
     color: #000; /* Цвет выделенного текста */
 }
-
 /* Стили для подпунктов */
 .about-us-production-block-2 p,
 .about-us-production-block-3 p,
@@ -836,8 +817,8 @@ ul li {
 /* КОНТАКТЫ */
 
 .contacts{
-    background-color: #dcd8c8;
-    border-radius: 30px;
+    background-color: #c8cfdc;
+    border-radius: 30px 30px 0 0;
     padding: 80px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
     background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('icons/pngwing.com1.png');
@@ -857,9 +838,7 @@ ul li {
     grid-template-rows: repeat(1, 1fr); 
     gap: 20px; 
 }
-
 /* Контакты */
-
 .block-1 h1{
     font-weight: bold;
     font-size: 24px;
@@ -917,6 +896,12 @@ ul li {
     .homepage-container{
         display: flex;
         flex-direction: column;
+    }
+
+    /* БЛОК ПРОДУКЦИЯ */
+    
+    .products{
+        padding: 40px;
     }
 }
 @media (max-width: 850px) {
@@ -1068,7 +1053,7 @@ ul li {
     /* БЛОК ПРОДУКЦИЯ */
     
     .products{
-        padding: 40px;
+        padding: 40px 20px;
     }
     /* Элемент продукта блока продукции */
     .item-product{
@@ -1117,6 +1102,95 @@ ul li {
         justify-content: center; /* Центрирование содержимого */
         align-items: center; /* Вертикальное выравнивание */
     }
+
+    /* О КОМПАНИИ */
+
+    /* Раздел элемонтов холдинга */
+    .about-us{
+        gap: 40px; /* Устанавливаем расстояние между элементами */
+        padding: 40px 20px;
+    }
+    /* Заголовок блока о компании */
+    .about-us-name{
+        font-size: 22px;
+        font-weight: 900;
+    }
+    /* Элементы холдинг */
+    .about-us-holding-company-container {
+        display: grid;
+        grid-template-areas: 
+            "block-1 block-1"  
+            "block-2 block-3"
+            "block-4 block-4"; 
+            grid-template-rows: 200px 200px; /* Увеличение высоты строк */
+            grid-template-columns: 1fr 1fr; /* Увеличение ширины колонок */
+        gap: 10px; /* Отступы между блоками */
+    }
+
+
+    /* Контейнера раздела технологий компании */
+    .about-us-production-container {
+        display: grid;
+        grid-template-columns: 1fr; /* Одна колонка для узких экранов */
+        grid-template-areas:
+            "text1"    
+            "image1"
+            "text2"
+            "image2"
+            "text3"
+            "image3";
+        gap: 10px; /* Отступы между блоками */
+        padding: 0; /* Внутренний отступ для контейнера */
+    
+    }
+    /* Назначаем сеточные области для каждого блока */
+    .about-us-production-block-1 {
+        grid-area: image1;
+    }
+    .about-us-production-block-2 {
+        grid-area: text1;
+    }
+    .about-us-production-block-4 {
+        grid-area: image2;
+    }
+    .about-us-production-block-3 {
+        grid-area: text2;
+    }
+    .about-us-production-block-5 {
+        grid-area: image3;
+    }
+    .about-us-production-block-6 {
+        grid-area: text3;
+    }
+    /* Стили изображений */
+    .about-us-production-block-1 img,
+    .about-us-production-block-4 img,
+    .about-us-production-block-5 img {
+        width: 100%;
+        height: 450px;
+        object-fit: cover;
+        border-radius: 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+        box-sizing: border-box;
+        display: block; /* Убирает отступы изображения внутри контейнера */
+        padding: 0;
+        margin: 0;
+    }
+    /* Общие стили для текстовых блоков */
+    .about-us-production-block-2,
+    .about-us-production-block-3,
+    .about-us-production-block-6 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0; /* Убираем отступы в самих блоках */
+        margin: 0; /* Убираем внешние отступы у блоков */
+        border: 2px solid #ccc;
+        border-radius: 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+        height: auto;
+    }
+
 }
 @media (max-width: 450px) {
     /* Навигация адаптива расширенная */
@@ -1277,6 +1351,133 @@ ul li {
     padding: 15px 40px;
     font-size: 16px;
     }
+
+    /* О КОМПАНИИ */
+
+    /* Раздел элемонтов холдинга */
+    .about-us{
+        gap: 10px; /* Устанавливаем расстояние между элементами */
+        padding: 40px 20px;
+    }
+    /* Заголовок блока о компании */
+    .about-us-name{
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    /* Элементы холдинг */
+    .about-us-holding-company-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px; /* Отступы между блоками */
+    }
+    /* Заголовок элемента холдинга */
+    .about-us-holding-company-block-1 h1,
+    .about-us-holding-company-block-2 h1,
+    .about-us-holding-company-block-3 h1 {
+        font-size: 18px;
+        font-weight: bold;
+        text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000; /* Черный контур вокруг текста */
+    }
+    /* Текст элемента холдинга */
+    .about-us-holding-company-block-1 p,
+    .about-us-holding-company-block-2 p,
+    .about-us-holding-company-block-3 p {
+        font-size: 14px;
+        font-weight: lighter;
+    }
+    /* Раздел истории холдинга */
+    .about-us-history-container {
+        display: flex;
+        flex-direction:column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px; /* Отступы между блоками */
+    }
+    .about-us-history-block {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        border: 2px solid #c3c3c3; /* Обводка */
+        border-radius: 20px; /* Закругление углов */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Небольшая тень для объема */
+        text-align: center;
+        padding: 20px 0;
+    }
+    .about-us-history-block h2,
+    .about-us-history-block h3, 
+    .about-us-history-block h4 {
+        margin: 5px;
+    }
+    .about-us-history-block-1{
+        border: none;
+        box-shadow: none;
+    }
+    /* Текст истории холдинга */
+    .about-us-history-block1 {
+        font-size: 18px;
+    }
+    
+
+    /* Контейнера раздела технологий компании */
+    .about-us-production-container {
+        display: grid;
+        grid-template-columns: 1fr; /* Одна колонка для узких экранов */
+        grid-template-areas:
+            "text1"    
+            "image1"
+            "text2"
+            "image2"
+            "text3"
+            "image3";
+        gap: 20px; /* Отступы между блоками */
+        padding: 0; /* Внутренний отступ для контейнера */
+    
+    }
+    /* Назначаем сеточные области для каждого блока */
+    .about-us-production-block-1 {
+        grid-area: image1;
+    }
+    .about-us-production-block-2 {
+        grid-area: text1;
+    }
+    .about-us-production-block-4 {
+        grid-area: image2;
+    }
+    .about-us-production-block-3 {
+        grid-area: text2;
+    }
+    .about-us-production-block-5 {
+        grid-area: image3;
+    }
+    .about-us-production-block-6 {
+        grid-area: text3;
+    }
+    /* Стили изображений */
+    .about-us-production-block-1 img,
+    .about-us-production-block-4 img,
+    .about-us-production-block-5 img {
+        width: 100%;
+        height: 350px;
+    }
+    /* Общие стили для текстовых блоков */
+    .about-us-production-block-2,
+    .about-us-production-block-3,
+    .about-us-production-block-6 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 20px;
+        height: auto;
+    }
+    /* Заголовок раздела технологий компании */
+    .about-us-production h1{
+        font-size: 18px;
+        margin: 40px 0;
+    }
+
+
 }
 @media (max-width: 375px) {
     /* Загловление главной страницы */
