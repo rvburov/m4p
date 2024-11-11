@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const totalQuestionsFirst = 5;
 
     const questionsFirst = [
-        { label: "Товар", placeholder: "Выберите товар" },
+        { label: "Товар", placeholder: "Укажите товар" },
         { label: "Количество", placeholder: "Укажите количество товара" },
         { label: "Имя", placeholder: "Укажите свое имя" },
         { label: "Телефон", placeholder: "Введите ваш номер телефона" },

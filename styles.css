@@ -103,7 +103,6 @@ header {
 .container-navigation-adaptiv-close{
     display: none;
 }
-
 /* Загловление главной страницы */
 .homepage-name{
     color: black;
@@ -259,7 +258,7 @@ header {
     margin-bottom: 20px;
 }
 .form-group label {
-    display: block;
+    display: none;
     margin-bottom: 8px;
     font-size: 16px;
     color: white;
@@ -387,6 +386,7 @@ main{
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
     color: white;
     cursor: pointer;
+    font-family: 'FuturaPT';
 }
 .item-product button:hover {
     background-color: rgb(205, 115, 14);
@@ -402,7 +402,7 @@ main{
     position: relative;
     text-align: left;
     padding-bottom: 10px; /* Отступ снизу для линии */
-    margin-bottom: 10px; /* Отступ между заголовком и следующим элементом */
+    margin: 10px 0; /* Отступ между заголовком и следующим элементом */
 }
 .item-product-info h1::after {
     content: '';
@@ -419,21 +419,20 @@ ul {
     list-style-type: disc; /* Устанавливаем стандартные маркеры в виде точек */
     margin-left: 20px; /* Добавляем отступ для лучшей видимости */
 }
-
 ul li {
-    margin-bottom: 10px; /* Добавляем отступ между пунктами списка */
     color: #656565;
     line-height: 1.5;
+    font-size: 16px;
 }
 /* Дополнительные изображения продукта блока продукции */
 .item-product-exemple{
     display: flex;
     flex-direction: column;
+    gap: 10px;
 }
 .item-product-exemple img{
     width: 200px;
     height: 200px;
-    margin: 10px;
     border-radius: 20px;
     border: 2px solid #ccc;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
@@ -1067,13 +1066,50 @@ ul li {
     }
 
     /* БЛОК ПРОДУКЦИЯ */
-
+    
+    .products{
+        padding: 40px;
+    }
+    /* Элемент продукта блока продукции */
     .item-product{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
+    /* Заголовок блока продукции */
+    .name-product{
+        font-size: 22px;
+    }
+    /* Заголовок продуктов блока продукции */
+    .name-catalog-product{
+        font-size: 18px;
+        margin-bottom: 10px;
+        margin-top: 40px;
+    }
+    /* Элемент продукта блока продукции */
+    .item-product{
+        gap: 30px;
+    }
+    /* Изображение продукта блока продукции */
+    .item-product-menu img{
+        width: 300px;
+        height: 300px;
+    }
+    /* Название продукта блока продукции */
+    .item-product-menu h1{
+        font-size: 20px;
+    }
+    /* Стоимость продукта блока продукции */
+    .item-product-menu p{
+        margin: 20px;
+        font-size: 20px;
+    }
+    /* Текст параметров продукта блока продукции */
+    ul li {
+        line-height: 1.5;
+    }
+    /* Дополнительные изображения продукта блока продукции */
     .item-product-exemple{
         display: flex;
         flex-direction: row; /* Выравнивание в ряд */
@@ -1114,7 +1150,7 @@ ul li {
     }
     /* Загловление главной страницы */
     .homepage-name{
-        font-size: 16px;
+        font-size: 18px;
         margin: 40px 10px 10px 10px;
     }
     .advantages-container{
@@ -1140,16 +1176,14 @@ ul li {
     }
     /* Изображение каталога на главной странице */
     .catalog-container img{
-        width: 320px;
-        height: 220px;
+        width: 300px;
+        height: 300px;
     }
     /* Кнопка для прехода в каталог на главной странице */
     .catalog-container button{
         margin: 15px;
-        border-radius: 30px;
-        padding: 15px 30px;
+        padding: 15px 60px;
         font-size: 16px;
-        font-weight: bold;
     }
     /* Форма заявки */
     /* Универсальный стиль для обоих форм */
@@ -1190,15 +1224,8 @@ ul li {
     button#prev-btn-second,
     button#next-btn-second {
         padding: 15px 30px;
-        border: 2px solid #ccc;
         border-radius: 30px;
         font-size: 16px;
-    }
-    button#prev-btn-first:hover,
-    button#next-btn-first:hover,
-    button#prev-btn-second:hover,
-    button#next-btn-second:hover {
-        background-color: rgb(205, 115, 14);
     }
     /* Сообщения после отправки */
     #success-message-first h2,
@@ -1211,7 +1238,41 @@ ul li {
         font-size: 18px;
         line-height: 1.5;
     }
+     /* БЛОК ПРОДУКЦИЯ */
     
+     .products{
+        padding: 40px 20px;
+    }
+    /* Заголовок блока продукции */
+    .name-product{
+        font-size: 18px;
+    }
+    /* Заголовок продуктов блока продукции */
+    .name-catalog-product{
+        font-size: 16px;
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+    /* Элемент продукта блока продукции */
+    .item-product{
+        gap: 20px;
+    }
+    /* Название продукта блока продукции */
+    .item-product-menu h1{
+    margin-bottom: 20px;
+    font-size: 18px;
+    }
+    /* Стоимость продукта блока продукции */
+    .item-product-menu p{
+    margin: 20px;
+    font-size: 18px;
+    }
+    /* Кнопка продукта блока продукции */
+    .item-product button{
+    border-radius: 30px;
+    padding: 15px 40px;
+    font-size: 16px;
+    }
 }
 @media (max-width: 375px) {
     /* Загловление главной страницы */
