@@ -992,6 +992,11 @@ ul li {
     .navigation-logo-m4p-adaptiv-close{
         width: 140px;
     }
+    /* Логотип бургерного меню навигации адаптива */
+    .navigation-open-menu-adaptiv-open,
+    .navigation-close-menu-adaptiv-close{
+        width: 40px;
+    }
     /* Номер телефона навигации адаптива */
     .navigation-phone-adaptiv-open,
     .navigation-phone-adaptiv-close{
@@ -1000,11 +1005,6 @@ ul li {
         text-decoration: none;
         cursor: pointer;
         font-weight: bold;
-    }
-    /* Логотип бургерного меню навигации адаптива */
-    .navigation-open-menu-adaptiv-open,
-    .navigation-close-menu-adaptiv-close{
-        width: 40px;
     }
     /* Логотип телефона навигации адаптива */
     .navigation-phone-logo-adaptiv-close{
@@ -1094,6 +1094,21 @@ ul li {
     .navigation-close-menu-adaptiv-close{
         width: 30px;
     }
+    /* Номер телефона навигации адаптива */
+    .navigation-phone-adaptiv-open,
+    .navigation-phone-adaptiv-close{
+        font-size: 20px;
+    }
+    /* Логотип телефона навигации адаптива */
+    .navigation-phone-logo-adaptiv-close{
+        height: 30px;
+        margin: 10px;
+    }
+    /* Текст навигации адаптива */
+    .navigation-adaptiv-close{
+        font-size: 16px;
+        margin: 20px;
+    }
     /* Загловление главной страницы */
     .homepage-name{
         font-size: 16px;
@@ -1132,5 +1147,9 @@ ul li {
     .homepage-name{
         font-size: 14px;
         margin: 40px 10px 10px 10px;
+    }
+    /* Заголовок каталога на главной странице */
+    .catalog-container h1 {
+        font-size: 14px;
     }
 }
