@@ -1327,8 +1327,8 @@ ul li {
     }
     /* Загловление главной страницы */
     .homepage-name{
-        font-size: 16px;
-        margin: 80px 20px 10px 20px;
+        font-size: 14px;
+        margin: 70px 10px 10px 10px;
     }
     .advantages-container{
         padding: 8px;
@@ -1349,7 +1349,7 @@ ul li {
     }
     /* Заголовок каталога на главной странице */
     .catalog-container h1 {
-        font-size: 16px;
+        font-size: 14px;
     }
     /* Изображение каталога на главной странице */
     .catalog-container img{
@@ -1421,7 +1421,7 @@ ul li {
     }
     /* Заголовок продуктов блока продукции */
     .name-catalog-product{
-        font-size: 16px;
+        font-size: 14px;
         margin-top: 30px;
         margin-bottom: 10px;
     }
@@ -1686,7 +1686,7 @@ ul li {
         font-size: 20px;
     }
     .block-1{
-        margin: 0px 20px;
+        margin: 0px;
     }
     /* Карта */
     .block-2 {
@@ -1696,13 +1696,4 @@ ul li {
 
 }
 @media (max-width: 375px) {
-    /* Загловление главной страницы */
-    .homepage-name{
-        font-size: 14px;
-        margin: 40px 10px 10px 10px;
-    }
-    /* Заголовок каталога на главной странице */
-    .catalog-container h1 {
-        font-size: 14px;
-    }
 }
