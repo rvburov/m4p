@@ -1,28 +1,24 @@
 
-// ПЕРЕКЛЮЧЕНИЕ ИЗОБРАЖЕНИЙ КАТАЛОГА НА ГЛАВНОЙ СТРАНИЦЕ
+document.addEventListener("DOMContentLoaded", function () {
+    // Скрываем все блоки перед инициализацией
+    const items = document.querySelectorAll('.catalog-container');
+    let currentIndex = 0;
+    const totalItems = items.length;
 
-let currentIndex = 0;
-const items = document.querySelectorAll('.catalog-container');
-const totalItems = items.length;
+    // Показываем только первый элемент при загрузке страницы
+    items.forEach((item) => item.classList.remove('active'));
+    items[currentIndex].classList.add('active');
 
-// Функция для переключения к следующему изображению
-function showNextItem() {
-    items[currentIndex].classList.remove('active'); // Убираем класс "active" у текущего элемента
-    currentIndex = (currentIndex + 1) % totalItems; // Переход к следующему элементу
-    items[currentIndex].classList.add('active'); // Добавляем класс "active" новому элементу
-}
+    // Функция для переключения на следующий элемент
+    function showNextItem() {
+        items[currentIndex].classList.remove('active');
+        currentIndex = (currentIndex + 1) % totalItems; // Переход к следующему элементу
+        items[currentIndex].classList.add('active');
+    }
 
-// Запускаем переключение с интервалом 3 секунды
-setInterval(showNextItem, 3000); // Интервал переключения (3000 мс = 3 секунды)
-
-// Отображение блоков .homepage-item после полной загрузки страницы
-window.addEventListener('load', function () {
-    const homepageItems = document.querySelectorAll('.homepage-item');
-    homepageItems.forEach(item => {
-        item.style.opacity = '1'; // Устанавливаем видимость элементов
-    });
+    // Запускаем интервал переключения
+    setInterval(showNextItem, 3000); // Интервал 3 секунды
 });
-
 
 //НАВИГАТОР ПРОГРУТКА СТРАНИЦЫ
 
