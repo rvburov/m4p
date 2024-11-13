@@ -1302,6 +1302,12 @@ ul li {
     
 }
 @media (max-width: 450px) {
+    body {
+        gap: 10px;
+    }
+    main{
+        gap: 10px; 
+    }
     /* Навигация адаптива расширенная */
     .container-navigation-adaptiv-open,
     .container-navigation-adaptiv-close {
