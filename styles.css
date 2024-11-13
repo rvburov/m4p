@@ -995,7 +995,6 @@ ul li {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-top: 20px;
     }
     /* Элементы телефона и месседжеров навигации адаптива расширенная */
     .item-navigation-adaptiv-close div{
@@ -1014,13 +1013,13 @@ ul li {
         width: 40px;
     }
     /* Номер телефона навигации адаптива */
-    .navigation-phone-adaptiv-open,
     .navigation-phone-adaptiv-close{
         color: black;
         font-size: 28px;
         text-decoration: none;
         cursor: pointer;
         font-weight: bold;
+        margin: 10px;
     }
     /* Логотип телефона навигации адаптива */
     .navigation-phone-logo-adaptiv-close{
@@ -1034,7 +1033,7 @@ ul li {
         font-size: 22px;
         font-weight: bold;
         cursor: pointer;
-        margin: 30px 10px;
+        margin: 20px;
     }
     .navigation-adaptiv-close:hover {
         color: rgb(218, 124, 16);
@@ -1421,7 +1420,7 @@ ul li {
     }
     /* Заголовок продуктов блока продукции */
     .name-catalog-product{
-        font-size: 14px;
+        font-size: 16px;
         margin-top: 30px;
         margin-bottom: 10px;
     }
@@ -1686,7 +1685,7 @@ ul li {
         font-size: 20px;
     }
     .block-1{
-        margin: 0px;
+        margin: 10px;
     }
     /* Карта */
     .block-2 {
