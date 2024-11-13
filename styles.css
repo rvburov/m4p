@@ -338,10 +338,10 @@ main{
     border-radius: 30px;
     padding: 80px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('icons/pngwing.com1.png');
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat; 
+    background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url('icons/pngwing.com.png');
+    background-size: auto; /* Изображение будет отображаться в оригинальном размере */
+    background-position: center;
+    background-repeat: repeat; /* Изображение будет повторяться, чтобы заполнить весь блок */ 
 }
 /* Заголовок блока продукции */
 .name-product{
@@ -463,11 +463,11 @@ ul li {
     display: flex; /* Делаем контейнер flex-контейнером */
     flex-direction: column; /* Размещаем элементы вертикально */
     gap: 60px; /* Устанавливаем расстояние между элементами */
-    background-color: #bcbcbc;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.8)), url('icons/pngwing.com1.png');
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat; 
+    background-color: #dcd8c8;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url('icons/pngwing.com.png');
+    background-size: auto; /* Изображение будет отображаться в оригинальном размере */
+    background-position: center;
+    background-repeat: repeat; /* Изображение будет повторяться, чтобы заполнить весь блок */ 
     padding: 80px;
     border-radius: 30px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
@@ -519,7 +519,7 @@ ul li {
 }
 .about-us-holding-company-block-2 {    
     grid-area: block-2;       
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('image/tehnoma-eco/tehnoma-eco.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('image/production/1.jpg');
 }
 .about-us-holding-company-block-3 {
     grid-area: block-3;
@@ -741,11 +741,11 @@ ul li {
     display: flex;
     flex-direction: column;
     gap: 30px;
-    background-color: #bcbcbc;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.8)), url('icons/pngwing.com1.png');
-    background-size: cover;
+    background-color: #dcd8c8;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url('icons/pngwing.com.png');
+    background-size: auto; /* Изображение будет отображаться в оригинальном размере */
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: repeat; /* Изображение будет повторяться, чтобы заполнить весь блок */ 
     padding: 80px;
     border-radius: 30px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
@@ -860,14 +860,14 @@ ul li {
 /* КОНТАКТЫ */
 
 .contacts{
-    background-color: #c8cfdc;
     border-radius: 30px 30px 0 0;
     padding: 80px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('icons/pngwing.com1.png');
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat; 
+    background-color: #dcd8c8;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url('icons/pngwing.com.png');
+    background-size: auto; /* Изображение будет отображаться в оригинальном размере */
+    background-position: center;
+    background-repeat: repeat; /* Изображение будет повторяться, чтобы заполнить весь блок */ 
 }
 .name-contacts{
     font-size: 28px;
