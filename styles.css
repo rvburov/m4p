@@ -1094,7 +1094,7 @@ ul li {
     }
     /* Изображение каталога на главной странице */
     .catalog-container img{
-        width: 620px;
+        width: 100%;
         height: 350px;
     }
 
@@ -1309,6 +1309,9 @@ ul li {
     body {
         gap: 10px;
     }
+    header{
+        border-radius: 0 0 20px 20px;
+    }
     main{
         gap: 10px; 
     }
@@ -1372,7 +1375,7 @@ ul li {
     }
     /* Изображение каталога на главной странице */
     .catalog-container img{
-        width: 300px;
+        width: 100%;
         height: 300px;
     }
     /* Кнопка для прехода в каталог на главной странице */
@@ -1433,6 +1436,7 @@ ul li {
      .products{
         padding: 40px 20px;
         gap: 20px;
+        border-radius: 20px;
     }
     /* Заголовок блока продукции */
     .name-product{
@@ -1458,8 +1462,10 @@ ul li {
     }
     /* Изображение продукта блока продукции */
     .item-product-menu img{
-        width: 340px;
-        height: 340px;
+        width: 100%; /* Ширина изображения будет 100% от родительского контейнера */
+        height: auto; /* Высота будет автоматически подстраиваться под ширину */
+        aspect-ratio: 1 / 1; /* Сохраняет соотношение сторон 1:1 для квадрата */
+        object-fit: cover;
     }
     /* Кнопка продукта блока продукции */
     .item-product button{
