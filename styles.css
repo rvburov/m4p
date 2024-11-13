@@ -1021,6 +1021,9 @@ ul li {
         font-weight: bold;
         margin: 10px;
     }
+    .navigation-phone-adaptiv-close:hover {
+        color: rgb(218, 124, 16);
+    }
     /* Логотип телефона навигации адаптива */
     .navigation-phone-logo-adaptiv-close{
         height: 50px;
