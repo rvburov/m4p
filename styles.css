@@ -1266,6 +1266,7 @@ ul li {
     }
     .name-contacts{
         font-size: 22px;
+        margin-bottom: 20px;
     }
     .contacts-container {
         display: flex;
@@ -1676,11 +1677,10 @@ ul li {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        gap: 20px; /* Отступ между картой и текстом */
+        gap: 10px; /* Отступ между картой и текстом */
     }
     .block-1 h1{
         font-size: 20px;
-        margin-top: 0px;
     }
     .block-1 h2{
         font-size: 20px;
