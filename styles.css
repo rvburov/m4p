@@ -1145,12 +1145,20 @@ ul li {
         line-height: 1.5;
     }
     /* Дополнительные изображения продукта блока продукции */
-    .item-product-exemple{
+    .item-product-exemple {
         display: flex;
         flex-direction: row; /* Выравнивание в ряд */
         gap: 10px; /* Расстояние между изображениями */
-        justify-content: center; /* Центрирование содержимого */
-        align-items: center; /* Вертикальное выравнивание */
+        overflow-x: auto; /* Включает горизонтальный скролл */
+        white-space: nowrap; /* Запрещает перенос изображений на следующую строку */
+        padding-bottom: 10px; /* Отступ снизу, чтобы не обрезать тени */
+        max-width: 100%; /* Ограничивает ширину контейнера */
+    }
+    .item-product-exemple img {
+        width: 200px;
+        height: 200px;
+        flex-shrink: 0; /* Отключает уменьшение размера изображений */
+        box-shadow: none;
     }
 
     /* О КОМПАНИИ */
@@ -1479,6 +1487,7 @@ ul li {
     .about-us{
         gap: 10px; /* Устанавливаем расстояние между элементами */
         padding: 40px 20px;
+        border-radius: 20px;
     }
     /* Заголовок блока о компании */
     .about-us-name{
@@ -1595,6 +1604,7 @@ ul li {
     #id-distributor {
         gap: 10px;
         padding: 10px;
+        border-radius: 20px;
     }
     /* Заголовок блока сотрудничество */
     .distributor-name-menu{
@@ -1687,10 +1697,11 @@ ul li {
         color: white; /* Убедитесь, что текст белого цвета */
     }
     /* КОНТАКТЫ */
-
+    
     /* Контейнер для карты и текста */
     .contacts{
         padding: 10px;
+        border-radius: 20px 30px 0 0;
     }
     .name-contacts{
         font-size: 18px;
