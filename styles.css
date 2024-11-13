@@ -134,6 +134,8 @@ header {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    opacity: 0; /* Скрываем элементы путем установки непрозрачности */
+    transition: opacity 0.5s ease; /* Добавляем плавный переход */
 }
 .advantages-container{
     display: flex;

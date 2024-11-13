@@ -1,15 +1,28 @@
 
-let currentIndex = 0;
-    const items = document.querySelectorAll('.catalog-container');
-    const totalItems = items.length;
+// ПЕРЕКЛЮЧЕНИЕ ИЗОБРАЖЕНИЙ КАТАЛОГА НА ГЛАВНОЙ СТРАНИЦЕ
 
-    function showNextItem() {
-        items[currentIndex].classList.remove('active');
-        currentIndex = (currentIndex + 1) % totalItems; // Переход к следующему элементу
-        items[currentIndex].classList.add('active');
-    }
-    setInterval(showNextItem, 3000); // Интервал переключения (3000 мс = 3 секунды)
- 
+let currentIndex = 0;
+const items = document.querySelectorAll('.catalog-container');
+const totalItems = items.length;
+
+// Функция для переключения к следующему изображению
+function showNextItem() {
+    items[currentIndex].classList.remove('active'); // Убираем класс "active" у текущего элемента
+    currentIndex = (currentIndex + 1) % totalItems; // Переход к следующему элементу
+    items[currentIndex].classList.add('active'); // Добавляем класс "active" новому элементу
+}
+
+// Запускаем переключение с интервалом 3 секунды
+setInterval(showNextItem, 3000); // Интервал переключения (3000 мс = 3 секунды)
+
+// Отображение блоков .homepage-item после полной загрузки страницы
+window.addEventListener('load', function () {
+    const homepageItems = document.querySelectorAll('.homepage-item');
+    homepageItems.forEach(item => {
+        item.style.opacity = '1'; // Устанавливаем видимость элементов
+    });
+});
+
 
 //НАВИГАТОР ПРОГРУТКА СТРАНИЦЫ
 
