@@ -327,6 +327,9 @@ main{
     gap: 20px; 
 }
 .products{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
     background-color: #dcd8c8;
     border-radius: 30px;
     padding: 80px;
@@ -347,7 +350,7 @@ main{
     font-size: 18px;
     font-weight: bolder;
     text-align: center;
-    margin: 40px 0;
+    margin: 0;
 }
 /* Элемент продукта блока продукции */
 .item-product{
@@ -445,7 +448,6 @@ ul li {
     border: 2px solid #ccc;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
-
 
 /* О КОМПАНИИ */
 
@@ -1100,6 +1102,7 @@ ul li {
     
     .products{
         padding: 40px 20px;
+        gap: 20px;
     }
     /* Элемент продукта блока продукции */
     .item-product{
@@ -1107,6 +1110,7 @@ ul li {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        gap: 30px;
     }
     /* Заголовок блока продукции */
     .name-product{
@@ -1115,12 +1119,12 @@ ul li {
     /* Заголовок продуктов блока продукции */
     .name-catalog-product{
         font-size: 18px;
-        margin-bottom: 10px;
-        margin-top: 40px;
     }
-    /* Элемент продукта блока продукции */
-    .item-product{
-        gap: 30px;
+    .item-product-menu{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     /* Изображение продукта блока продукции */
     .item-product-menu img{
