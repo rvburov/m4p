@@ -26,6 +26,13 @@ header, main, footer {
     width: 100%; /* Занимает всю ширину контейнера */
     max-width: 1300px; /* Фиксированная максимальная ширина для хедера и других блоков */
 }
+#first-form-container,
+#id-products,
+#id-about-us,
+#id-distributor,
+#id-contacts{
+    scroll-margin-top: 80px; /* Отступ сверху для видимости секции */
+}
 
 
 /* БЛОК ГЛАВНОЙ СТРАНИЦЫ */
@@ -1005,7 +1012,7 @@ ul li {
     /* Логотип компании навигации адаптива */
     .navigation-logo-m4p-adaptiv-open,
     .navigation-logo-m4p-adaptiv-close{
-        width: 140px;
+        width: 120px;
     }
     /* Логотип бургерного меню навигации адаптива */
     .navigation-open-menu-adaptiv-open,
