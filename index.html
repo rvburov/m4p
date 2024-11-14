@@ -6,7 +6,18 @@
     <title>ПРОИЗВОДСТВО РЕЗИНОВЫХ ИЗДЕЛИЙ</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="styles.css">
-</head>
+     <!-- Подключаем библиотеку html2pdf.js -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+    <!-- Favicon для всех браузеров -->
+    <link rel="icon" href="logo/favicon.ico" type="image/x-icon">
+    <!-- PNG-версия для современных браузеров -->
+    <link rel="icon" href="logo/apple-touch-icon.png" type="image/png" sizes="32x32">
+    <!-- Значок для устройств Apple -->
+    <link rel="apple-touch-icon" href="logo/apple-touch-icon.png" sizes="180x180">
+    <!-- Поддержка для Microsoft -->
+    <meta name="msapplication-TileImage" content="logo/apple-touch-icon.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    </head>
 <body>
     <header>
         <div class="container-navigation"><!-- Навигация адаптива -->
@@ -184,9 +195,10 @@
     <main>
         <div id="id-products" class="products"><!-- Блок продукции -->
             <h1 class="name-product"><!-- Заголовок блока продукции -->
-                ПРОДУКЦИЯ
+                ПРОДУКЦИЯ 
+                <br>(<a href="#" id="download-price">скачать прайс</a>)
             </h1>
-            <h1 class="name-catalog-product"><!-- Заголовок протекторной ленты блока продукции -->
+   <h1 class="name-catalog-product"><!-- Заголовок протекторной ленты блока продукции -->
                 ПРОТЕКТОРНАЯ ЛЕНТА
             </h1>
             <figure class="item-product"><!-- Элемент протекторной ленты блока продукции -->

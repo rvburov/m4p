@@ -299,3 +299,18 @@ closeMenuButton.addEventListener('click', () => {
     adaptivOpenMenu.style.display = 'flex'; // Показать значок открытия меню
     adaptivCloseMenu.style.display = 'none'; // Скрыть закрытое меню
 });
+
+
+document.getElementById('download-price').addEventListener('click', function (event) {
+    event.preventDefault();
+    const element = document.querySelector('.item-product'); // Выбор элемента item-product
+    const options = {
+        margin: 0.1,
+        filename: 'pricelist.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 3 },
+        jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' }
+    };
+
+    html2pdf().set(options).from(element).save();
+});
