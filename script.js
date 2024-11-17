@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function () {
         { label: "Количество", placeholder: "Укажите количество товара" },
         { label: "Имя", placeholder: "Укажите свое имя" },
         { label: "Телефон", placeholder: "Введите ваш номер телефона" },
-        { label: "Комментарий", placeholder: "Оставьте комментарий."}
+        { label: "Комментарий", placeholder: "Оставьте комментарий"}
     ];
 
     const progressElementFirst = document.getElementById('progress-first');
@@ -320,9 +320,6 @@ document.getElementById('download-price').addEventListener('click', function (ev
     // Убираем задний фон из копии
     clone.style.background = 'none';
     clone.style.backgroundImage = 'none';
-
-
-
     // Применяем фиксированные инлайн-стили к клону
     clone.style.width = '700px';
     clone.style.margin = '0 auto'; // Центрируем блок на странице
@@ -345,7 +342,6 @@ document.getElementById('download-price').addEventListener('click', function (ev
             item.style.pageBreakBefore = 'always'; // Переносим блок на новую страницу
         }
     });
-
     // Стили для заголовка блока продукции
     const nameProduct = clone.querySelectorAll('.name-product');
     nameProduct.forEach(name => {
@@ -387,10 +383,6 @@ document.getElementById('download-price').addEventListener('click', function (ev
         li.style.lineHeight = '1.5';
         li.style.fontSize = '12px';
     });
-
-
-
-
     // Настройки для html2pdf
     const options = {
         margin: 0.5, // Поля на странице PDF
@@ -423,5 +415,36 @@ document.getElementById('download-price').addEventListener('click', function (ev
     });
 });
 
+// ДОБАВИТЬ ЗАКАЗ В ФОРМУ
+document.addEventListener('DOMContentLoaded', () => {
+    // Найти все кнопки "ЗАКАЗАТЬ"
+    const orderButtons = document.querySelectorAll('.item-product-btn');
+    const inputField = document.getElementById('input-field-first'); // Поле формы для наименования товара
 
+    orderButtons.forEach(button => {
+        button.addEventListener('click', (event) => {
+            event.preventDefault(); // Останавливаем стандартное поведение
+
+            // Найти родительский элемент .item-product-menu
+            const productMenu = button.closest('.item-product-menu');
+
+            // Найти наименование товара (текст внутри <h1>)
+            const productName = productMenu.querySelector('h1').textContent;
+
+            // Проверить, есть ли уже этот товар в поле формы
+            const currentItems = inputField.value.split(', ').map(item => item.trim());
+            if (!currentItems.includes(productName)) {
+                if (inputField.value) {
+                    inputField.value += `, ${productName}`;
+                } else {
+                    inputField.value = productName;
+                }
+            }
+
+            // Программно прокрутить страницу к форме
+            const formContainer = document.querySelector('#first-form-container');
+            formContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+    });
+});
 
