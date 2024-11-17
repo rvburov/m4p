@@ -337,6 +337,7 @@ document.getElementById('download-price').addEventListener('click', function (ev
         item.style.flexDirection = 'column';
         item.style.justifyContent = 'center';
         item.style.alignItems = 'center';
+        item.style.gap = "0px";
 
         // Добавляем перенос на новую страницу, начиная со второго блока
         if (index > 0) {
@@ -348,12 +349,6 @@ document.getElementById('download-price').addEventListener('click', function (ev
     const nameProduct = clone.querySelectorAll('.name-product');
     nameProduct.forEach(name => {
         name.style.fontSize = '22px';
-    });
-
-    // Стили для заголовков продуктов
-    const nameCatalogProduct = clone.querySelectorAll('.name-catalog-product');
-    nameCatalogProduct.forEach(name => {
-        name.style.fontSize = '18px';
     });
 
     // Стили для элементов меню продукта
