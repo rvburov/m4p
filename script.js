@@ -324,11 +324,12 @@ document.getElementById('download-price').addEventListener('click', function (ev
 
 
     // Применяем фиксированные инлайн-стили к клону
-    clone.style.width = '600px';
+    clone.style.width = '700px';
     clone.style.margin = '0 auto'; // Центрируем блок на странице
     clone.style.padding = '0px'; // Убираем лишние отступы
     clone.style.fontSize = '14px';
     clone.style.boxSizing = 'border-box'; // Учитываем отступы и размеры
+    clone.style.gap = "0px";
 
     // Применяем фиксированные стили к вложенным элементам
     const items = clone.querySelectorAll('.item-product');
@@ -363,8 +364,8 @@ document.getElementById('download-price').addEventListener('click', function (ev
     // Стили для изображений продуктов
     const productImages = clone.querySelectorAll('.item-product-menu img');
     productImages.forEach(img => {
-        img.style.width = '300px';
-        img.style.height = '300px';
+        img.style.width = '270px';
+        img.style.height = '270px';
     });
 
     // Стили для названий продуктов
