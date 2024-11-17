@@ -385,7 +385,7 @@ document.getElementById('download-price').addEventListener('click', function (ev
     const ulElements = clone.querySelectorAll('ul li');
     ulElements.forEach(li => {
         li.style.lineHeight = '1.5';
-        li.style.fontSize = '14px';
+        li.style.fontSize = '12px';
     });
 
 
@@ -408,7 +408,7 @@ document.getElementById('download-price').addEventListener('click', function (ev
     const container = document.createElement('div');
     container.style.position = 'absolute';
     container.style.left = '-9999px';
-    container.style.width = '850px'; // Фиксируем ширину контейнера
+    container.style.width = '700px'; // Фиксируем ширину контейнера
     container.appendChild(clone);
     document.body.appendChild(container);
 
