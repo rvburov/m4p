@@ -324,7 +324,7 @@ document.getElementById('download-price').addEventListener('click', function (ev
 
 
     // Применяем фиксированные инлайн-стили к клону
-    clone.style.width = '700px';
+    clone.style.width = '600px';
     clone.style.margin = '0 auto'; // Центрируем блок на странице
     clone.style.padding = '0px'; // Убираем лишние отступы
     clone.style.fontSize = '14px';
