@@ -375,14 +375,14 @@ document.getElementById('download-price').addEventListener('click', function (ev
     // Стили для названий продуктов
     const productNames = clone.querySelectorAll('.item-product-menu h1');
     productNames.forEach(name => {
-        name.style.fontSize = '20px';
+        name.style.fontSize = '16px';
     });
 
     // Стили для стоимости продуктов
     const productPrices = clone.querySelectorAll('.item-product-menu p');
     productPrices.forEach(price => {
-        price.style.margin = '20px';
-        price.style.fontSize = '20px';
+        price.style.margin = '10px';
+        price.style.fontSize = '16px';
     });
 
     // Стили для текста параметров
