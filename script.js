@@ -370,20 +370,21 @@ document.getElementById('download-price').addEventListener('click', function (ev
     // Стили для названий продуктов
     const productNames = clone.querySelectorAll('.item-product-menu h1');
     productNames.forEach(name => {
-        name.style.fontSize = '16px';
+        name.style.fontSize = '20px';
     });
 
     // Стили для стоимости продуктов
     const productPrices = clone.querySelectorAll('.item-product-menu p');
     productPrices.forEach(price => {
         price.style.margin = '10px';
-        price.style.fontSize = '16px';
+        price.style.fontSize = '20px';
     });
 
     // Стили для текста параметров
     const ulElements = clone.querySelectorAll('ul li');
     ulElements.forEach(li => {
         li.style.lineHeight = '1.5';
+        li.style.fontSize = '14px';
     });
 
 
