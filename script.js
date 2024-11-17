@@ -300,17 +300,131 @@ closeMenuButton.addEventListener('click', () => {
     adaptivCloseMenu.style.display = 'none'; // Скрыть закрытое меню
 });
 
-
+// ФУНКЦИЯ СКАЧИВАНИЯ БЛОКА ПРОДУКЦИИ В PDF ФАЙЛ
 document.getElementById('download-price').addEventListener('click', function (event) {
     event.preventDefault();
-    const element = document.querySelector('.item-product'); // Выбор элемента item-product
+
+    // Выбираем элемент, который нужно сохранить
+    const element = document.querySelector('.products'); 
+
+    // Клонируем элемент для PDF
+    const clone = element.cloneNode(true);
+
+    // Убираем элементы с заданными классами только в копии
+    ['.name-product', '.item-product-btn', '.name-catalog-product', '.item-product-exemple'].forEach(selector => {
+        const elements = clone.querySelectorAll(selector);
+        elements.forEach(element => {
+            element.style.display = 'none'; // Скрываем элементы
+        });
+    });
+    // Убираем задний фон из копии
+    clone.style.background = 'none';
+    clone.style.backgroundImage = 'none';
+
+
+
+    // Применяем фиксированные инлайн-стили к клону
+    clone.style.width = '700px';
+    clone.style.margin = '0 auto'; // Центрируем блок на странице
+    clone.style.padding = '0px'; // Убираем лишние отступы
+    clone.style.fontSize = '14px';
+    clone.style.boxSizing = 'border-box'; // Учитываем отступы и размеры
+
+    // Применяем фиксированные стили к вложенным элементам
+    const items = clone.querySelectorAll('.item-product');
+    items.forEach((item, index) => {
+        item.style.display = 'flex';
+        item.style.flexDirection = 'column';
+        item.style.justifyContent = 'center';
+        item.style.alignItems = 'center';
+
+        // Добавляем перенос на новую страницу, начиная со второго блока
+        if (index > 0) {
+            item.style.pageBreakBefore = 'always'; // Переносим блок на новую страницу
+        }
+    });
+
+    // Стили для заголовка блока продукции
+    const nameProduct = clone.querySelectorAll('.name-product');
+    nameProduct.forEach(name => {
+        name.style.fontSize = '22px';
+    });
+
+    // Стили для заголовков продуктов
+    const nameCatalogProduct = clone.querySelectorAll('.name-catalog-product');
+    nameCatalogProduct.forEach(name => {
+        name.style.fontSize = '18px';
+    });
+
+    // Стили для элементов меню продукта
+    const itemProductMenu = clone.querySelectorAll('.item-product-menu');
+    itemProductMenu.forEach(menu => {
+        menu.style.display = 'flex';
+        menu.style.flexDirection = 'column';
+        menu.style.justifyContent = 'center';
+        menu.style.alignItems = 'center';
+    });
+
+    // Стили для изображений продуктов
+    const productImages = clone.querySelectorAll('.item-product-menu img');
+    productImages.forEach(img => {
+        img.style.width = '300px';
+        img.style.height = '300px';
+    });
+
+    // Стили для названий продуктов
+    const productNames = clone.querySelectorAll('.item-product-menu h1');
+    productNames.forEach(name => {
+        name.style.fontSize = '20px';
+    });
+
+    // Стили для стоимости продуктов
+    const productPrices = clone.querySelectorAll('.item-product-menu p');
+    productPrices.forEach(price => {
+        price.style.margin = '20px';
+        price.style.fontSize = '20px';
+    });
+
+    // Стили для текста параметров
+    const ulElements = clone.querySelectorAll('ul li');
+    ulElements.forEach(li => {
+        li.style.lineHeight = '1.5';
+    });
+
+
+
+
+    // Настройки для html2pdf
     const options = {
-        margin: 0.1,
-        filename: 'pricelist.pdf',
-        image: { type: 'jpeg', quality: 0.98 },
-        html2canvas: { scale: 3 },
-        jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' }
+        margin: 0.5, // Поля на странице PDF
+        filename: 'pricelist.pdf', // Имя файла
+        image: { type: 'jpeg', quality: 0.98 }, // Формат и качество изображений
+        html2canvas: {
+            scale: 2, // Масштаб для повышения качества
+            useCORS: true, // Для работы с кросс-доменными изображениями
+            scrollY: 0 // Убирает смещение
+        },
+        jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' } // Формат страницы
     };
 
-    html2pdf().set(options).from(element).save();
+    // Создаем временный контейнер для клонированного элемента
+    const container = document.createElement('div');
+    container.style.position = 'absolute';
+    container.style.left = '-9999px';
+    container.style.width = '850px'; // Фиксируем ширину контейнера
+    container.appendChild(clone);
+    document.body.appendChild(container);
+
+    // Создаем PDF из клонированного элемента
+    html2pdf().set(options).from(clone).save().then(() => {
+        // Удаляем временный контейнер после создания PDF
+        document.body.removeChild(container);
+    }).catch(err => {
+        console.error('Ошибка при создании PDF:', err);
+        // Удаляем временный контейнер в случае ошибки
+        document.body.removeChild(container);
+    });
 });
+
+
+
