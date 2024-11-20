@@ -347,7 +347,7 @@ document.getElementById('download-price').addEventListener('click', function (ev
         item.style.flexDirection = 'column';
         item.style.justifyContent = 'center';
         item.style.alignItems = 'center';
-        item.style.gap = "0px";
+        item.style.gap = "10px";
 
         // Добавляем перенос на новую страницу, начиная со второго блока
         if (index > 0) {
