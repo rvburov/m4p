@@ -1,4 +1,4 @@
-
+// ПЕРЕКЛЮЧЕНИЕ ИЗОБРАЖЕНИИ НА ГЛАВНОЙ СТРАНИЦЫ
 document.addEventListener("DOMContentLoaded", function () {
     // Скрываем все блоки перед инициализацией
     const items = document.querySelectorAll('.catalog-container');
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
     setInterval(showNextItem, 3000); // Интервал 3 секунды
 });
 
-//НАВИГАТОР ПРОГРУТКА СТРАНИЦЫ
+// НАВИГАТОР ПРОГРУТКА СТРАНИЦЫ
 
 window.addEventListener("scroll", function() {
     var navigation = document.querySelector(".container-navigation");
@@ -36,7 +36,7 @@ window.addEventListener("scroll", function() {
     }
 });
 
-//ФОРМА ЗАЯВКИ ТОВАРА
+// ФОРМА ЗАЯВКИ ТОВАРА
 
 document.addEventListener('DOMContentLoaded', function () {
     let currentQuestionFirst = 1;
@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Ваш токен и ID чата в Telegram
     const telegramToken = '7565359008:AAG-mPWEY8luvPOldIehVgE7QTHru4yDI10';
-    const chatId = '6388010174';
+    const chatId = ['6388010174', '809882910'];
 
     function updateFormFirst() {
         const progressPercentFirst = (currentQuestionFirst / totalQuestionsFirst) * 100;
@@ -99,22 +99,28 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const url = `https://api.telegram.org/bot${telegramToken}/sendMessage`;
 
-        fetch(url, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                chat_id: chatId,
-                text: message,
-            }),
-        })
-        .then(response => response.json())
-        .then(data => {
-            console.log('Message sent to Telegram:', data);
-        })
-        .catch(error => {
-            console.error('Error sending message to Telegram:', error);
+        chatId.forEach(id => {
+            fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    chat_id: id,
+                    text: message,
+                }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.ok) {
+                    console.log(`Сообщение успешно отправлено в чат ${id}`);
+                } else {
+                    console.error(`Ошибка отправки сообщения в чат ${id}:`, data);
+                }
+            })
+            .catch(error => {
+                console.error(`Ошибка подключения для чата ${id}:`, error);
+            });
         });
     }
 
@@ -158,7 +164,7 @@ document.addEventListener('DOMContentLoaded', function () {
     updateFormFirst();
 });
 
-//ФОРМА ЗАЯВКИ СОТРУДНИЧЕСТВА
+// ФОРМА ЗАЯВКИ СОТРУДНИЧЕСТВА
 
 document.addEventListener('DOMContentLoaded', function () {
     let currentQuestionSecond = 1;
